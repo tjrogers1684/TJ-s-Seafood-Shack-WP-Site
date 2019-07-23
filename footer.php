@@ -10,7 +10,7 @@
 			// ----- WEEKLY SPECIALS QUERY ----
 			$hp_specials_args = [
 				'post_type' => 'specials',
-				'posts_per_page' => '1',
+				'posts_per_page' => '7',
 				'order' => 'DESC',
 				'orderby' => 'date',
 			];
@@ -33,34 +33,25 @@
 					<div class="weekly-specials-days">
 
 						<?php
+							$day = 0;
 							if ( $hp_specials_query->have_posts() ) : while ($hp_specials_query->have_posts() ) : $hp_specials_query->the_post(); ?>
 
 							<?php
-
-								$fields = get_field_objects();
-								$day = 0;
+								$post_meta = get_post_meta( $post->ID );
 								$specials_day = date('N');
 								//$specials_day = 4;
 
+								$day ++;
+
 								// echo 'Day: '.$day;
 								// echo 'Specials Day: '.$specials_day;
-
-								if( $fields ) {
-
-									foreach( $fields as $field_name => $field ) {
-										if( $field['value'] ) {
-											$day ++;
+								//echo 'SPECIAL META<br/><pre>'.print_r( $post_meta, true ).'</pre>';
 							?>
-										<div class="weekly-specials-day day-<?php echo $day; ?> <?php if( $specials_day == $day ) { echo 'today'; } ?>">
-											<h3><?php echo $field['label']; ?></h3>
-											<p><?php echo $field['value']; ?></p>
-										</div>
-							<?php
-										}
-									}
-								}
 
-							?>
+							<div class="weekly-specials-day day-<?php echo $day; ?> <?php if( $specials_day == $day && $specials_day < 6 ) { echo 'today'; } ?>">
+								<h3><?php the_title(); ?></h3>
+								<p><?php the_content(); ?></p>
+							</div>
 
 						<?php endwhile; else : ?>
 						<?php endif; ?>
@@ -103,9 +94,9 @@
 			<a href="/" class="site-logo-footer"><img src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"></a>
 
 			<div class="social-links">
-				<a class="social-link facebook" href="http://www.facebook.com/ncsinformation"><i class="fab fa-facebook-square"></i></a>
-				<a class="social-link twitter" href="http://www.twitter.com/ncsinformation"><i class="fab fa-twitter-square"></i></a>
-				<a class="social-link youtube" href="https://www.flickr.com/photos/ncsinformation/sets/"><i class="fab fa-youtube"></i></a>
+				<a class="social-link facebook" href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
+				<a class="social-link twitter" href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
+				<a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a>
 			</div>
 		</div>
 

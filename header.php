@@ -28,22 +28,58 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	</nav>
 
 	<?php // -------------- SPECIALS BANNER -- ?>
+	<?php
+
+		// ------------------------------- QUERIES ----
+		// ----- WEEKLY SPECIALS QUERY ----
+		$hp_specials_banner_args = [
+			'post_type' => 'specials',
+			'posts_per_page' => '7',
+			'order' => 'DESC',
+			'orderby' => 'date',
+		];
+
+		// The Query
+		$hp_specials_banner_query = new WP_Query( $hp_specials_banner_args );
+
+	?>
+
 	<div class="specials-banner-wrap-outer">
 	    <div class="specials-banner-wrap">
-	        <div class="special-today">
-				<p>Today’s Special: Kids Eat Free</p>
-			</div>
+			<?php
+				$day = 0;
+				if ( $hp_specials_banner_query->have_posts() ) : while ($hp_specials_banner_query->have_posts() ) : $hp_specials_banner_query->the_post(); ?>
 
-			<a href="#specials" class="see-more-specials">See Weekly Specials</a>
-	    </div><!-- END LOGIN SOCIAL WRAP -->
-	</div><!-- END LOGIN SOCIAL WRAP OUTER -->
+				<?php
+					$post_meta = get_post_meta( $post->ID );
+					$specials_day = date('N');
+					//$specials_day = 4;
+					$excerpt = get_the_excerpt();
+					$excerpt = wp_strip_all_tags($excerpt);
+
+					//$specials_day = 4;
+
+					$day ++;
+				?>
+
+				<div class="special-today day-<?php echo $day; ?> <?php if( $specials_day == $day ) { echo 'today'; } ?>">
+					<p>Today's Special: <?php echo $excerpt; ?></p>
+				</div>
+
+				<?php endwhile; else : ?>
+				<?php endif; ?>
+
+				<a href="#specials" class="see-more-specials">See Weekly Specials</a>
+
+		</div><!-- END SPECIALS BANNER WRAP -->
+	</div><!-- END SPECIALS BANNERL WRAP OUTER -->
 
 	<div class="header-wrap-outer">
 	    <div class="header-wrap">
 	        <p class="header-banner-social-menu">
-				<a href="https://www.facebook.com/fromthegroundupincfl/"><i class="fab fa-facebook-square"></i></a>
-				<a href="https://twitter.com/sodnrocks"><i class="fab fa-twitter-square"></i></a>
-				<a href="https://www.youtube.com/channel/UCle7ByEOF7XT4nqK8StIwXg"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
 			</p>
 
 	        <a href="/" class="site-logo"><img src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"></a>

@@ -67,6 +67,11 @@ hr {
 			font-size: 1.5rem;
 			font-weight: 100;
 			font-style: italic;
+			display: none;
+
+			&.today {
+				display: block;
+			}
 		}
 
 		a {
@@ -104,6 +109,8 @@ hr {
 
 		.header-banner-social-menu {
 			text-align: center;
+			position: relative;
+			z-index: 2;
 
 			a {
 				line-height: 1;
@@ -118,9 +125,7 @@ hr {
 		}
 
 		.site-logo {
-			//position: relative;
 			width: 20%;
-			//max-width: 282px;
 			display: block;
 			line-height: 0;
 
@@ -130,6 +135,12 @@ hr {
 				//width: 100%;
 				top: -2.5rem;
 				left: 1.5rem;
+				transition: 0.3s;
+
+				&:hover {
+					transform: rotate(10deg)scale(1.05);
+					left: 2rem;
+				}
 			}
 		}
 

@@ -73,19 +73,27 @@ button,
   input[type="button"]:active,
   button:active, .btn:visited, input[type="submit"]:visited,
   input[type="button"]:visited,
-  button:visited,
+  button:visited, .btn:visited:hover, input[type="submit"]:visited:hover,
+  input[type="button"]:visited:hover,
+  button:visited:hover,
   .button:active,
   .button:visited,
+  .button:visited:hover,
   [type="button"]:active,
   [type="button"]:visited,
+  [type="button"]:visited:hover,
   .woocommerce #respond input#submit.alt:active,
   .woocommerce #respond input#submit.alt:visited,
+  .woocommerce #respond input#submit.alt:visited:hover,
   .woocommerce a.button.alt:active,
   .woocommerce a.button.alt:visited,
+  .woocommerce a.button.alt:visited:hover,
   .woocommerce button.button.alt:active,
   .woocommerce button.button.alt:visited,
+  .woocommerce button.button.alt:visited:hover,
   .woocommerce input.button.alt:active,
-  .woocommerce input.button.alt:visited {
+  .woocommerce input.button.alt:visited,
+  .woocommerce input.button.alt:visited:hover {
     color: #fff; }
   .btn i, input[type="submit"] i,
   input[type="button"] i,
@@ -189,7 +197,11 @@ button {
     -webkit-align-items: center;
             align-items: center; }
   .top-nav ul li a {
-    padding: 0 1rem; }
+    padding: 0.5rem 1rem;
+    display: block; }
+  .top-nav ul li:hover a {
+    background: #05b07e;
+    color: #fff; }
   .top-nav ul li.menu-item-has-children {
     position: relative; }
     .top-nav ul li.menu-item-has-children ul {
@@ -199,9 +211,11 @@ button {
       left: 0; }
       .top-nav ul li.menu-item-has-children ul li {
         display: block;
-        width: 15em; }
+        width: 12em; }
         .top-nav ul li.menu-item-has-children ul li a {
           display: block; }
+          .top-nav ul li.menu-item-has-children ul li a:hover {
+            background: #07e1a1; }
     .top-nav ul li.menu-item-has-children:hover ul {
       display: block; }
 
@@ -275,7 +289,10 @@ img {
     .specials-banner-wrap-outer .specials-banner-wrap .special-today {
       font-size: 1.5rem;
       font-weight: 100;
-      font-style: italic; }
+      font-style: italic;
+      display: none; }
+      .specials-banner-wrap-outer .specials-banner-wrap .special-today.today {
+        display: block; }
     .specials-banner-wrap-outer .specials-banner-wrap a {
       position: absolute;
       right: 1.5rem;
@@ -313,7 +330,9 @@ img {
     max-width: 1440px;
     margin: 0 auto; }
     .header-wrap-outer .header-wrap .header-banner-social-menu {
-      text-align: center; }
+      text-align: center;
+      position: relative;
+      z-index: 2; }
       .header-wrap-outer .header-wrap .header-banner-social-menu a {
         line-height: 1;
         display: block;
@@ -329,7 +348,13 @@ img {
         position: absolute;
         max-width: 282px;
         top: -2.5rem;
-        left: 1.5rem; }
+        left: 1.5rem;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .header-wrap-outer .header-wrap .site-logo img:hover {
+          -webkit-transform: rotate(10deg) scale(1.05);
+                  transform: rotate(10deg) scale(1.05);
+          left: 2rem; }
     .header-wrap-outer .header-wrap .header-contact-wrap {
       margin-right: auto;
       display: -webkit-box;

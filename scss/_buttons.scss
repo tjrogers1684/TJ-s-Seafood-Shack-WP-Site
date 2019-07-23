@@ -14,7 +14,8 @@
 	display: inline-block;
 
 	&:active,
-	&:visited {
+	&:visited,
+	&:visited:hover {
 		color: #fff;
 	}
 

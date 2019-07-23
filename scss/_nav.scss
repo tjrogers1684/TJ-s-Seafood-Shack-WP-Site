@@ -25,10 +25,13 @@
 	ul li {
 
 		a {
-			padding: 0 1rem;
+			padding: 0.5rem 1rem;
+			display: block;
 		}
 
 		&:hover a {
+			background: $brand-dk;
+			color: #fff;
 		}
 
 		&.current-menu-item a {
@@ -45,12 +48,13 @@
 
 				li {
 					display: block;
-					width: 15em;
+					width: 12em;
 
 					a {
 						display: block;
 
 						&:hover {
+							background: $brand;
 						}
 					}
 				}
