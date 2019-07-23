@@ -68,6 +68,7 @@ hr {
 			font-weight: 100;
 			font-style: italic;
 			display: none;
+			text-transform: capitalize;
 
 			&.today {
 				display: block;

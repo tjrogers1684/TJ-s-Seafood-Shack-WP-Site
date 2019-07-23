@@ -290,7 +290,8 @@ img {
       font-size: 1.5rem;
       font-weight: 100;
       font-style: italic;
-      display: none; }
+      display: none;
+      text-transform: capitalize; }
       .specials-banner-wrap-outer .specials-banner-wrap .special-today.today {
         display: block; }
     .specials-banner-wrap-outer .specials-banner-wrap a {
