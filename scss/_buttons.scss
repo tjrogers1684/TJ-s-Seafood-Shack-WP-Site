@@ -1,0 +1,33 @@
+
+.btn,
+.button,
+[type="button"],
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	color: #fff;
+	background: $brand;
+	text-align: center;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	display: inline-block;
+
+	i {
+		margin-right: 0.5rem;
+	}
+
+	&:hover {
+		background: $brand-dk;
+		color: #fff;
+	}
+
+	&.btn-sm {
+	}
+
+	&.btn-xsm {
+	}
+
+	&.btn-lg {
+	}
+}

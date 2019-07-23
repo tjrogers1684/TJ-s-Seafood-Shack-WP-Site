@@ -1,0 +1,469 @@
+@import 'compass/css3';
+@import 'bits';
+
+/* CSS Document */
+
+h1,
+h2 {
+	font-size: 2.35rem;
+	margin-bottom: 0.5rem;
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- FEATURE AREA --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.feature-wrap-outer {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 2rem;
+		left: 50%;
+		width: 1480px;
+		height: 222px;
+		margin: 0 auto;
+		background: rgba( 8,255,182, 0.5);
+		transform: skew(0, -2deg)translateX(-50%);
+		box-shadow: 0 9px 17px rgba(0, 0, 0, 0.2);
+		z-index: 0;
+	}
+
+	.floating-image-container {
+
+		&.lemon {
+			position: relative;
+			max-width: 1440px;
+			margin: 0 auto;
+			z-index: 0;
+			transform: translateY(-17rem);
+
+			img {
+				position: absolute;
+				top: 0;
+				left: -4rem;
+			}
+		}
+
+		&.shrimp {
+			position: absolute;
+			right: -8.75rem;
+			top: 0;
+			z-index: 0;
+
+			img {
+				&.line-icon-shrimp-1 {
+					transform: scaleX(-1)rotate(180deg);
+				}
+
+				&.line-icon-shrimp-2 {
+					transform: translate(-3rem,100%);
+				}
+			}
+		}
+	}
+
+	.feature-wrap {
+		background: $brand;
+		max-width: 1440px;
+		margin: 0 auto;
+		min-height: 650px;
+		background: $brand url("/wp-content/themes/tjs/images/feature-hp.jpg") no-repeat center center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-end;
+		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+		position: relative;
+
+		.feature {
+			color: #fff;
+			width: 100%;
+			margin-right: -1rem;
+			text-align: center;
+			padding: 2rem 1.5rem;
+			font-size: 2em;
+			font-weight: 100;
+			position: relative;
+			z-index: 2;
+
+			.tagline {
+				transform: translateY(-2.5rem);
+
+				span {
+					display: inline-block;
+					font-family: 'Satisfy', cursive;
+					font-size: 3.25em;
+					margin-right: 1rem;
+					transform: translateY(2.5rem);
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------
+// ----- HP CALLOUTS --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.homepage-acllouts {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 3rem 0 0;
+
+	.hp-callout {
+		width: calc( 33% - 1rem );
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#06db8e+0,08e7b4+100 */
+		background: rgb(6,219,142); /* Old browsers */
+		background: -moz-linear-gradient(left, rgba(6,219,142,1) 0%, rgba(8,231,180,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(6,219,142,1) 0%,rgba(8,231,180,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(6,219,142,1) 0%,rgba(8,231,180,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06db8e', endColorstr='#08e7b4',GradientType=1 ); /* IE6-9 */
+		position: relative;
+		color: #fff;
+		overflow: hidden;
+		margin: 0 0.5rem;
+		padding: 2rem 1rem 2rem 5.5rem;
+		border-radius: 5px;
+		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+
+		&:hover {
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#048658+0,06ae84+100 */
+			background: rgb(4,134,88); /* Old browsers */
+			background: -moz-linear-gradient(left, rgba(4,134,88,1) 0%, rgba(6,174,132,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048658', endColorstr='#06ae84',GradientType=1 ); /* IE6-9 */
+		}
+
+		&.callout-order-online {
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f39717+0,f7b923+100 */
+			background: rgb(243,151,23); /* Old browsers */
+			background: -moz-linear-gradient(left, rgba(243,151,23,1) 0%, rgba(247,185,35,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(243,151,23,1) 0%,rgba(247,185,35,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(243,151,23,1) 0%,rgba(247,185,35,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39717', endColorstr='#f7b923',GradientType=1 ); /* IE6-9 */
+
+			&:hover {
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#048658+0,06ae84+100 */
+				background: rgb(4,134,88); /* Old browsers */
+				background: -moz-linear-gradient(left, rgba(4,134,88,1) 0%, rgba(6,174,132,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048658', endColorstr='#06ae84',GradientType=1 ); /* IE6-9 */
+			}
+
+			.callout-icon {
+				img {
+					left: -1rem;
+				}
+			}
+		}
+
+		&.callout-food-truck-menu {
+			.callout-icon {
+				img {
+					width: 115px;
+					left: -3.4rem;
+				}
+			}
+		}
+
+		&.callout-merch {
+			.callout-icon {
+				img {
+					width: 90px;
+					left: -1.75rem;
+				}
+			}
+		}
+
+		.callout-icon {
+			img {
+				width: 76px;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				position: absolute;
+			}
+		}
+
+		.callout-text {
+			span {
+				display: block;
+
+				&.callout-text-tagline {
+					font-size: 0.76em;
+					text-transform: uppercase;
+				}
+
+				&.callout-text-main {
+					font-size: 1.76rem;
+				}
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------
+// ----- TASTE OF OVIEDO --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.taste-of-oviedo-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	padding: 7.05rem 1.5rem 9.41rem 27.5rem;
+
+	img {
+		position: absolute;
+		top: 1rem;
+		left: -5.5rem;
+		// width: 60%;
+		// max-width: 470px;
+	}
+
+	.taste-of-oviedo-text {
+		// width: 80%;
+	}
+}
+
+
+/* --------------------------------------------- SHELLS POSITIONING -- */
+.floating-image-hidden-container {
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	right: -8rem;
+
+	img {
+		transform: translateY(1.9rem);
+
+		&.line-icon-shells-large {
+			transform: translateY(4rem);
+		}
+	}
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- WEEKLY SPECIALS --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.weekly-specials-container {
+	background: $brand-alt url("/wp-content/themes/tjs/images/bkd-weekly-specials.jpg") no-repeat center center;
+	background-size: cover;
+	position: relative;
+	padding: 3rem 1.5rem;
+
+	&:before {
+		background: $brand-alt;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		opacity: 0.95;
+	}
+
+	.weekly-specials {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+
+		.weekly-specials-heading {
+			text-align: center;
+
+			h2,
+			i {
+				color: #fff;
+				margin-bottom: 0;
+			}
+
+			.font-alt {
+				margin-top: 0.25rem;
+				color: #a3650f;
+				font-size: 1.41em;
+
+				i {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+
+		.weekly-specials-days {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			align-items: stretch;
+			max-width: 1120px;
+			margin: 3rem auto 0;
+
+			.weekly-specials-day {
+				width: 16.66%;
+				padding: 0 1.25rem;
+				font-size: 0.88em;
+				position: relative;
+
+				&.today {
+					color: #fff;
+
+					h3 {
+						color: #fff;
+					}
+
+					&:before,
+					&:after {
+						position: absolute;
+					}
+
+					&:before {
+						content: "\f02b";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						top: -3.25rem;
+						right: 0.5rem;
+						z-index: 2;
+						font-size: 1.5em;
+					}
+
+					&:after {
+						content: '';
+						width: 100%;
+						height: 170%;
+						top: -2rem;
+						left: 0;
+						background: $brand;
+						transform: skew(0, -5deg);
+						box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+					}
+
+					h3,
+					p {
+						position: relative;
+						z-index: 2;
+					}
+				}
+
+				h3 {
+					font-size: 1.41rem;
+					color: #a3650f;
+				}
+			}
+		}
+
+	}
+}
+
+// ---------------------------------------------------------------------------------
+// ----- CATERING SECTION --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.catering-section-wrap-outer {
+	.catering-section-wrap {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 8.94rem 0;
+		position: relative;
+
+		.floating-image {
+			position: absolute;
+			top: 50%;
+			left: 2rem;
+			transform: translateY(-35%);
+		}
+
+		.catering-section {
+			max-width: 1120px;
+			margin: 0 auto;
+			padding: 2rem;
+			background: #fff;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+
+			.catering-text {
+				width: 58%;
+				font-size: 0.94em;
+
+				.btn {
+					font-size: 1rem;
+					margin-top: 1rem;
+				}
+			}
+
+			.food-truck {
+				position: absolute;
+				top: 50%;
+				right: -1.5rem;
+				transform: translateY(-50%);
+				z-index: 2;
+			}
+
+			.img-hidden-container {
+				overflow: hidden;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+				img {
+					transform: translate(40%,6rem);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+@import 'buttons';
+
+// ---------------------------------------------------------------------------------
+// ----- COMMON STYLES -------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+label {
+	margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1em;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	font-family: sans-serif;
+	padding: 1rem;
+	resize: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+	@extend .btn;
+	border: 0;
+	font-size: 1em;
+}

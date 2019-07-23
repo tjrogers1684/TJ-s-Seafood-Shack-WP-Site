@@ -1,0 +1,110 @@
+
+// ---------------------------------------------------------------------------------
+// ----- TOP NAV -------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.top-nav {
+	width: 40%;
+	position: relative;
+	z-index: 5;
+
+	ul,
+	ul li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	ul li {
+
+		a {
+			padding: 0 1rem;
+		}
+
+		&:hover a {
+		}
+
+		&.current-menu-item a {
+		}
+
+		&.menu-item-has-children {
+			position: relative;
+
+			ul {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+
+				li {
+					display: block;
+					width: 15em;
+
+					a {
+						display: block;
+
+						&:hover {
+						}
+					}
+				}
+			}
+
+			&:hover ul {
+				display: block;
+			}
+		}
+	}
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- FOOTER NAV ----------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.footer-nav {
+	ul,
+	ul li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul li {
+
+		a {
+			font-weight: bold;
+			display: block;
+			padding: 0.5rem;
+		}
+
+		&:hover a {
+		}
+
+		&.current-menu-item a {
+		}
+
+		&.menu-item-has-children {
+			position: relative;
+
+			ul {
+				display: none;
+			}
+		}
+	}
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- MOBILE NAV ----------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.mobile-nav,
+.mobile-nav-activate,
+.mobile-nav-close {
+	display: none;
+}

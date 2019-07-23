@@ -1,0 +1,351 @@
+@import 'compass/css3';
+@import 'bits';
+
+/* CSS Document */
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- CORE STYLES ---------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+html, body {
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	background: #fff url("/wp-content/themes/tjs/images/bkd-body.jpg") repeat;
+}
+
+body {
+	color: $maintext;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+a, a:visited {
+	color: $brand;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $brand-dk;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto !important;
+}
+
+hr {
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- SPECIALS BANNER -----------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.specials-banner-wrap-outer {
+	background: #f5a81d;
+
+	.specials-banner-wrap {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 0.5rem 1.5rem;
+		color: #fff;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.special-today {
+			font-size: 1.5rem;
+			font-weight: 100;
+			font-style: italic;
+		}
+
+		a {
+			position: absolute;
+			right: 1.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #fff;
+			text-decoration: underline;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-style: italic;
+			font-size: 0.76rem;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------
+// ----- HEADER --------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.header-wrap-outer {
+	position: relative;
+	z-index: 2;
+
+	.header-wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		padding: 1rem 0;
+		max-width: 1440px;
+		margin: 0 auto;
+
+		.header-banner-social-menu {
+			text-align: center;
+
+			a {
+				line-height: 1;
+				display: block;
+				padding: 0 1rem;
+				font-size: 1.25em;
+
+				& + a {
+					padding-top: 0.5rem;
+				}
+			}
+		}
+
+		.site-logo {
+			//position: relative;
+			width: 20%;
+			//max-width: 282px;
+			display: block;
+			line-height: 0;
+
+			img {
+				position: absolute;
+				max-width: 282px;
+				//width: 100%;
+				top: -2.5rem;
+				left: 1.5rem;
+			}
+		}
+
+		.header-contact-wrap {
+			margin-right: auto;
+			//width: 30%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			font-size: 0.823em;
+			line-height: 1.25;
+			//padding-left: 3rem;
+
+			div {
+				//padding-left: 3rem;
+			}
+
+			.header-contact-phone-hours {
+				padding-left: 3rem;
+				span {
+					display: block;
+
+					&.header-contact-phone {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- FEATURE -------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.feature-wrap {
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- CONTENT -------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.content-wrap {
+	max-width: 1120px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.content-area {
+	width: 100%;
+
+	&.has-sidebar {
+
+	}
+}
+
+.not-front .content-area {
+	max-width: 900px;
+}
+
+.sidebar-area {
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- FOOTER --------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.footer-wrap-outer {
+	//background: url("/wp-content/themes/tjs/images/bkd-footer-top.png") no-repeat top center;
+	background: #e5e6e1;
+	//background-size: 2600px;
+	padding: 5rem 0;
+	position: relative;
+	//overflow-y: hidden;
+	mask-image: url(/wp-content/themes/tjs/images/bkd-footer-mask-large.png);
+	mask-size: 100%;
+	mask-repeat: no-repeat;
+
+	.footer-wrap {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+
+		.floating-image {
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			&.line-icon-crab {
+				top: -9.25rem;
+				right: -1.5rem;
+			}
+
+			&.shirmp-1 {
+				top: 5rem;
+				right: 9rem;
+			}
+
+			&.shirmp-2 {
+				top: 10rem;
+				right: 16rem;
+				transform: scaleX(-1);
+			}
+		}
+
+		.footer-logo {
+			padding-right: 6rem;
+
+			.site-logo-footer {
+				display: block;
+				line-height: 0;
+				margin-bottom: -1rem;
+
+				img {
+					max-width: 282px;
+				}
+			}
+
+			.social-links {
+				text-align: right;
+				padding-right: 1rem;
+
+				a {
+					display: inline-block;
+					padding: 0 0.5rem;
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.footer-contact {
+			max-width: 400px;
+			width: 35%;
+			font-size: 0.82em;
+
+			.newsletter-signup {
+
+				.form-label {
+					font-weight: bold;
+				}
+
+				.form-input {
+					margin-top: 0.5rem;
+					font-style: italic;
+					background: #fff;
+					padding: 0.75rem;
+					border-radius: 3px;
+				}
+			}
+
+			.contact-info-hours {
+				margin-top: 2rem;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+
+				.contact-info {
+					.footer-contact-phone {
+						font-size: 1.18rem;
+						font-weight: bold;
+					}
+
+					.footer-contact-address {
+						margin-top: 1.25rem;
+					}
+				}
+
+				.hours-open span,
+				.hours-closed {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.footer-nav {
+			padding-left: 4rem;
+		}
+
+		.site-info,
+		.site-info a {
+			color: #bcbcbc;
+		}
+
+		.site-info {
+			width: 100%;
+			margin-top: 5em;
+			text-align: center;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

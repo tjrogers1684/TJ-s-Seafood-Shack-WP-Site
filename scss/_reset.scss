@@ -1,0 +1,58 @@
+/*
+author: Thrive Creative Labs
+date modified: November 15, 2018
+type: reset css
+*/
+
+
+/* ----- Utility Classes ----- */
+.redNote {
+  padding: 5px;
+  background-color: #cc0000;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+/* ----- Reset all CSS ----- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, fieldset, form, label, legend, caption, tbody, tfoot, thead { margin : 0; padding : 0; outline : 0; border : 0; background: transparent; vertical-align: baseline; font-weight : inherit; font-style : inherit; font-size : 100%; font-family : inherit; }
+
+
+/* ----- floats ----- */
+
+.flt-right {
+  float: right;
+  margin: 0 0 0 15px;
+}
+
+@media (max-width: 650px) {
+  .flt-right {
+    float: none;
+    margin: 0;
+  }
+}
+
+.flt-left {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+@media (max-width: 650px) {
+  .flt-left {
+    float: none;
+    margin: 0;
+  }
+}
+
+.clearfloat {
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+/* ----- form styles ----- */
+.grippie {
+  display: none !important;
+}
