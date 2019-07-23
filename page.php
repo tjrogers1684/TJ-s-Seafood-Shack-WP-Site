@@ -24,7 +24,6 @@ get_header(); ?>
 
 	<?php get_sidebar(); ?>
 
-	<br class="clearfloat" />
 </div>
 
 <?php get_footer(); ?>

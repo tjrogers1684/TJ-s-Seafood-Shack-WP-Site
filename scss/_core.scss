@@ -17,6 +17,7 @@ html, body {
 	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
 	background: #fff url("/wp-content/themes/tjs/images/bkd-body.jpg") repeat;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -165,11 +166,84 @@ hr {
 
 
 // ---------------------------------------------------------------------------------
-// ----- FEATURE -------------------------------------------------------------------
+// ----- FEATURE AREA --------------------------------------------------------------
 // ---------------------------------------------------------------------------------
-.feature-wrap {
-}
+.feature-wrap-outer {
+	position: relative;
 
+	.floating-image-container {
+
+		&.lemon {
+			position: relative;
+			max-width: 1440px;
+			margin: 0 auto;
+			z-index: 0;
+			transform: translateY(-17rem);
+
+			img {
+				position: absolute;
+				top: 0;
+				left: -4rem;
+			}
+		}
+
+		&.shrimp {
+			position: absolute;
+			right: -8.75rem;
+			top: 2rem;
+			z-index: 0;
+
+			img {
+				&.line-icon-shrimp-1 {
+					transform: scaleX(-1)rotate(180deg);
+				}
+
+				&.line-icon-shrimp-2 {
+					transform: translate(-3rem,100%);
+				}
+			}
+		}
+	}
+
+	.feature-wrap {
+		background: $brand;
+		max-width: 1440px;
+		margin: 0 auto;
+		min-height: 650px;
+		background: $brand url("/wp-content/themes/tjs/images/feature-hp.jpg") no-repeat center center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-end;
+		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+		position: relative;
+
+		.feature {
+			color: #fff;
+			width: 100%;
+			margin-right: -1rem;
+			text-align: center;
+			padding: 2rem 1.5rem;
+			font-size: 2em;
+			font-weight: 100;
+			position: relative;
+			z-index: 2;
+
+			.tagline {
+				transform: translateY(-2.5rem);
+
+				span {
+					display: inline-block;
+					font-family: 'Satisfy', cursive;
+					font-size: 3.25em;
+					margin-right: 1rem;
+					transform: translateY(2.5rem);
+				}
+			}
+		}
+	}
+}
 
 // ---------------------------------------------------------------------------------
 // ----- CONTENT -------------------------------------------------------------------
@@ -178,6 +252,10 @@ hr {
 	max-width: 1120px;
 	margin: 0 auto;
 	position: relative;
+}
+
+.not-front .content-wrap {
+	padding: 3rem 1.75rem;
 }
 
 .content-area {
@@ -190,9 +268,185 @@ hr {
 
 .not-front .content-area {
 	max-width: 900px;
+	margin: 0 auto;
 }
 
 .sidebar-area {
+}
+
+
+// ---------------------------------------------------------------------------------
+// ----- WEEKLY SPECIALS --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.weekly-specials-container {
+	background: $brand-alt url("/wp-content/themes/tjs/images/bkd-weekly-specials.jpg") no-repeat center center;
+	background-size: cover;
+	position: relative;
+	padding: 3rem 1.5rem;
+
+	&:before {
+		background: $brand-alt;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		opacity: 0.95;
+	}
+
+	.weekly-specials {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+
+		.weekly-specials-heading {
+			text-align: center;
+
+			h2,
+			i {
+				color: #fff;
+				margin-bottom: 0;
+			}
+
+			.font-alt {
+				margin-top: 0.25rem;
+				color: #a3650f;
+				font-size: 1.41em;
+
+				i {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+
+		.weekly-specials-days {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			align-items: stretch;
+			max-width: 1120px;
+			margin: 3rem auto 0;
+
+			.weekly-specials-day {
+				width: 16.66%;
+				padding: 0 1.25rem;
+				font-size: 0.88em;
+				position: relative;
+
+				&.today {
+					color: #fff;
+
+					h3 {
+						color: #fff;
+					}
+
+					&:before,
+					&:after {
+						position: absolute;
+					}
+
+					&:before {
+						content: "\f02b";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						top: -3.25rem;
+						right: 0.5rem;
+						z-index: 2;
+						font-size: 1.5em;
+					}
+
+					&:after {
+						content: '';
+						width: 100%;
+						height: 170%;
+						top: -2rem;
+						left: 0;
+						background: $brand;
+						transform: skew(0, -5deg);
+						box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+					}
+
+					h3,
+					p {
+						position: relative;
+						z-index: 2;
+					}
+				}
+
+				h3 {
+					font-size: 1.41rem;
+					color: #a3650f;
+				}
+			}
+		}
+
+	}
+}
+
+// ---------------------------------------------------------------------------------
+// ----- CATERING SECTION --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.catering-section-wrap-outer {
+	.catering-section-wrap {
+		max-width: 1440px;
+		margin: 0 auto;
+		padding: 8.94rem 0;
+		position: relative;
+
+		.floating-image {
+			position: absolute;
+			top: 50%;
+			left: 2rem;
+			transform: translateY(-35%);
+		}
+
+		.catering-section {
+			max-width: 1120px;
+			margin: 0 auto;
+			padding: 2rem;
+			background: #fff;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+
+			.catering-text {
+				width: 58%;
+				font-size: 0.94em;
+
+				.btn {
+					font-size: 1rem;
+					margin-top: 1rem;
+				}
+			}
+
+			.food-truck {
+				position: absolute;
+				top: 50%;
+				right: -1.5rem;
+				transform: translateY(-50%);
+				z-index: 2;
+			}
+
+			.img-hidden-container {
+				overflow: hidden;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+				img {
+					transform: translate(40%,6rem);
+				}
+			}
+		}
+	}
 }
 
 
@@ -316,6 +570,8 @@ hr {
 
 		.footer-nav {
 			padding-left: 4rem;
+			position: relative;
+			z-index: 2;
 		}
 
 		.site-info,

@@ -21,25 +21,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* ----- floats ----- */
 
-.flt-right {
+.flt-right,
+.fltRight {
   float: right;
   margin: 0 0 0 15px;
 }
 
 @media (max-width: 650px) {
-  .flt-right {
+  .flt-right,
+  .fltRight {
     float: none;
     margin: 0;
   }
 }
 
-.flt-left {
+.flt-left,
+.fltLeft {
   float: left;
   margin: 0 15px 0 0;
 }
 
 @media (max-width: 650px) {
-  .flt-left {
+  .flt-left,
+  .fltLeft {
     float: none;
     margin: 0;
   }

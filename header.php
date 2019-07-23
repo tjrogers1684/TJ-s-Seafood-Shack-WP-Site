@@ -34,7 +34,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 				<p>Today’s Special: Kids Eat Free</p>
 			</div>
 
-			<a href="#" class="see-more-specials">See Weekly Specials</a>
+			<a href="#specials" class="see-more-specials">See Weekly Specials</a>
 	    </div><!-- END LOGIN SOCIAL WRAP -->
 	</div><!-- END LOGIN SOCIAL WRAP OUTER -->
 
@@ -94,9 +94,18 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
     <?php } else { ?>
     	<div class="feature-wrap-outer">
     		<div class="feature-wrap">
-		    	<div class="subfeature">
-		    		<p><img src="/wp-content/themes/tjs/images/feat-subpage-placeholder.jpg" alt="TJ's Seafood Shack"></p>
+				<div class="floating-image-container shrimp">
+		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
 		    	</div>
-		    </div>
-		</div>
+
+	    		<div class="subfeature feat-hp">
+		    		<p>&nbsp;</p>
+		    	</div>
+	    	</div>
+
+	    	<div class="floating-image-container lemon">
+	    		<img class="line-icon-lemon" src="/wp-content/themes/tjs/images/line-icon-lemon.png">
+	    	</div>
+    	</div>
 	<?php } ?>

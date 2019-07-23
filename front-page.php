@@ -28,7 +28,7 @@
 					</span>
 				</a>
 
-				<a href="#" class="hp-callout callout-food-truck-menu">
+				<a href="/menu/food-truck-menu/" class="hp-callout callout-food-truck-menu">
 					<span class="callout-icon"><img src="/wp-content/themes/tjs/images/icon-callout-food-truck-menu.svg"></span>
 					<span class="callout-text">
 						<span class="callout-text-tagline">TJ's in the community</span>

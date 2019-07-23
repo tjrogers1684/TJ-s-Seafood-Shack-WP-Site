@@ -20,72 +20,75 @@
 
 		?>
 
-		<?php // ------------------------------- WEEKLY SPECIALS -- ?>
-		<div class="weekly-specials-container">
-			<div class="weekly-specials">
-				<div class="weekly-specials-heading">
-					<h2>TJ’s Seafood Oviedo Weekly Specials</h2>
-					<p class="font-alt"><i class="fas fa-calendar-alt"></i> Closed Sundays</p>
-				</div>
+		<?php if ( is_front_page() ) { ?>
+			<?php // ------------------------------- WEEKLY SPECIALS -- ?>
+			<a name="specials"></a>
+			<div class="weekly-specials-container">
+				<div class="weekly-specials">
+					<div class="weekly-specials-heading">
+						<h2>TJ’s Seafood Oviedo Weekly Specials</h2>
+						<p class="font-alt"><i class="fas fa-calendar-alt"></i> Closed Sundays</p>
+					</div>
 
-				<div class="weekly-specials-days">
-
-					<?php
-						if ( $hp_specials_query->have_posts() ) : while ($hp_specials_query->have_posts() ) : $hp_specials_query->the_post(); ?>
+					<div class="weekly-specials-days">
 
 						<?php
+							if ( $hp_specials_query->have_posts() ) : while ($hp_specials_query->have_posts() ) : $hp_specials_query->the_post(); ?>
 
-							$fields = get_field_objects();
-							$day = 0;
-							$specials_day = date('N');
-							//$specials_day = 4;
+							<?php
 
-							// echo 'Day: '.$day;
-							// echo 'Specials Day: '.$specials_day;
+								$fields = get_field_objects();
+								$day = 0;
+								$specials_day = date('N');
+								//$specials_day = 4;
 
-							if( $fields ) {
+								// echo 'Day: '.$day;
+								// echo 'Specials Day: '.$specials_day;
 
-								foreach( $fields as $field_name => $field ) {
-									if( $field['value'] ) {
-										$day ++;
-						?>
-									<div class="weekly-specials-day day-<?php echo $day; ?> <?php if( $specials_day == $day ) { echo 'today'; } ?>">
-										<h3><?php echo $field['label']; ?></h3>
-										<p><?php echo $field['value']; ?></p>
-									</div>
-						<?php
+								if( $fields ) {
+
+									foreach( $fields as $field_name => $field ) {
+										if( $field['value'] ) {
+											$day ++;
+							?>
+										<div class="weekly-specials-day day-<?php echo $day; ?> <?php if( $specials_day == $day ) { echo 'today'; } ?>">
+											<h3><?php echo $field['label']; ?></h3>
+											<p><?php echo $field['value']; ?></p>
+										</div>
+							<?php
+										}
 									}
 								}
-							}
 
-						?>
+							?>
 
-					<?php endwhile; else : ?>
-					<?php endif; ?>
+						<?php endwhile; else : ?>
+						<?php endif; ?>
 
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="catering-section-wrap-outer">
-			<div class="catering-section-wrap">
-				<img class="floating-image line-icon-fish-platter" src="/wp-content/themes/tjs/images/line-icon-fish-on-dish.png">
+			<div class="catering-section-wrap-outer">
+				<div class="catering-section-wrap">
+					<img class="floating-image line-icon-fish-platter" src="/wp-content/themes/tjs/images/line-icon-fish-on-dish.png">
 
-				<div class="catering-section">
-					<div class="catering-text">
-			        	<h2>Let Us Cater Your Next Event!</h2>
+					<div class="catering-section">
+						<div class="catering-text">
+				        	<h2>Let Us Cater Your Next Event!</h2>
 
-			        	<p>Oviedo's TJ's Seafood Shack isn't just a great place to eat seafood, we cater parties and events as well, whether a small party at  your home or planning a large event.</p>
+				        	<p>Oviedo's TJ's Seafood Shack isn't just a great place to eat seafood, we cater parties and events as well, whether a small party at  your home or planning a large event.</p>
 
-			        	<p><a href="/about" class="btn hp-callout-catering"><i class="fas fa-truck"></i> Our Seafood Catering</a></p>
-			        </div>
+				        	<p><a href="/catering" class="btn hp-callout-catering"><i class="fas fa-truck"></i> Our Seafood Catering</a></p>
+				        </div>
 
-			        <img class="food-truck" src="/wp-content/themes/tjs/images/img-food-truck.png">
+				        <img class="food-truck" src="/wp-content/themes/tjs/images/img-food-truck.png">
 
-			        <span class="img-hidden-container"><img class="background-oval" src="/wp-content/themes/tjs/images/bkd-food-truck-oval.png"></span>
-			    </div>
+				        <span class="img-hidden-container"><img class="background-oval" src="/wp-content/themes/tjs/images/bkd-food-truck-oval.png"></span>
+				    </div>
+				</div>
 			</div>
-		</div>
+		<?php } ?>
 
 	</div>
 </div>

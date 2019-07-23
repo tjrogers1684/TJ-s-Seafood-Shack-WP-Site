@@ -1,0 +1,23 @@
+@import 'compass/css3';
+@import 'bits';
+
+/* CSS Document */
+
+// ---------------------------------------------------------------------------------
+// ----- FEATURE AREA --------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.not-front {
+	.feature-wrap-outer {
+		position: relative;
+
+		.floating-image-container {
+			&.lemon {
+				transform: translateY(-7rem);
+			}
+		}
+
+		.feature-wrap {
+			min-height: 240px;
+		}
+	}
+}
