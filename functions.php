@@ -49,7 +49,7 @@ function tjs_styles_scripts() {
 	// Roboto Font from Google Fonts
 	wp_enqueue_style( 'tjs-googlefonts', 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,700,700i|Satisfy&display=swap' );
 	wp_enqueue_style( 'tjs-animatecss', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css' );
-	wp_enqueue_script( 'tjs-global', get_theme_file_uri( '/js/ncs.js' ), array('jquery') );
+	wp_enqueue_script( 'tjs-global', get_theme_file_uri( '/js/tjs.js' ), array('jquery') );
 }
 add_action( 'wp_enqueue_scripts', 'tjs_styles_scripts' );
 

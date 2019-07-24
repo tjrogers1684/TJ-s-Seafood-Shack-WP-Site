@@ -79,7 +79,6 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	        <p class="header-banner-social-menu">
 				<a href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
 				<a href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
-				<a href="#"><i class="fab fa-youtube"></i></a>
 			</p>
 
 	        <a href="/" class="site-logo"><img src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"></a>
@@ -112,11 +111,6 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	<?php if ( is_front_page() ) { ?>
     	<div class="feature-wrap-outer">
     		<div class="feature-wrap">
-				<div class="floating-image-container shrimp">
-		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
-		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
-		    	</div>
-
 	    		<div class="feature feat-hp">
 		    		<p class="tagline"><span>Seafood Galore</span>& a whole lot more!</p>
 		    	</div>
@@ -124,6 +118,11 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 
 	    	<div class="floating-image-container lemon">
 	    		<img class="line-icon-lemon" src="/wp-content/themes/tjs/images/line-icon-lemon.png">
+
+	    		<div class="shrimp-container">
+		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    	</div>
 	    	</div>
     	</div>
 

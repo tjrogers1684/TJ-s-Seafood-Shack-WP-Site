@@ -104,7 +104,7 @@ hr {
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-		padding: 1rem 0;
+		padding: 1.5rem 0;
 		max-width: 1440px;
 		margin: 0 auto;
 
@@ -192,26 +192,25 @@ hr {
 			z-index: 0;
 			transform: translateY(-17rem);
 
-			img {
+			img.line-icon-lemon {
 				position: absolute;
 				top: 0;
 				left: -4rem;
 			}
-		}
 
-		&.shrimp {
-			position: absolute;
-			right: -8.75rem;
-			top: 2rem;
-			z-index: 0;
+			.shrimp-container {
+				position: absolute;
+				right: -8.75rem;
+				top: -22.5rem;
 
-			img {
-				&.line-icon-shrimp-1 {
-					transform: scaleX(-1)rotate(180deg);
-				}
+				img {
+					&.line-icon-shrimp-1 {
+						transform: scaleX(-1)rotate(180deg);
+					}
 
-				&.line-icon-shrimp-2 {
-					transform: translate(-3rem,100%);
+					&.line-icon-shrimp-2 {
+						transform: translate(-3rem,100%);
+					}
 				}
 			}
 		}
@@ -230,6 +229,7 @@ hr {
 		align-items: flex-end;
 		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
 		position: relative;
+		z-index: 1;
 
 		.feature {
 			color: #fff;
@@ -524,11 +524,11 @@ hr {
 
 			.social-links {
 				text-align: right;
-				padding-right: 1rem;
+				padding-right: 1.5rem;
 
 				a {
 					display: inline-block;
-					padding: 0 0.5rem;
+					padding: 0 0.25rem;
 					font-size: 1.5rem;
 				}
 			}
@@ -541,21 +541,24 @@ hr {
 
 			.newsletter-signup {
 
-				.form-label {
+				#nf-field-14_1-container,
+				#nf-field-18_1-container {
 					font-weight: bold;
+					margin-bottom: 0;
 				}
 
-				.form-input {
-					margin-top: 0.5rem;
+				.email-container input {
+					//margin-top: 0.5rem;
 					font-style: italic;
 					background: #fff;
 					padding: 0.75rem;
 					border-radius: 3px;
+					border: none;
 				}
 			}
 
 			.contact-info-hours {
-				margin-top: 2rem;
+				//margin-top: 2rem;
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;

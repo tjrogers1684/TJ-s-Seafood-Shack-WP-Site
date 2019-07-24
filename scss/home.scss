@@ -16,18 +16,20 @@ h2 {
 .feature-wrap-outer {
 	position: relative;
 
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 2rem;
-		left: 50%;
-		width: 1480px;
-		height: 222px;
-		margin: 0 auto;
-		background: rgba( 8,255,182, 0.5);
-		transform: skew(0, -2deg)translateX(-50%);
-		box-shadow: 0 9px 17px rgba(0, 0, 0, 0.2);
-		z-index: 0;
+	.feature-wrap {
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 2rem;
+			left: 50%;
+			width: 1480px;
+			height: 222px;
+			margin: 0 auto;
+			background: rgba( 8,255,182, 0.5);
+			transform: skew(0, -2deg)translateX(-50%);
+			box-shadow: 0 9px 17px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
 	}
 }
 
@@ -158,6 +160,10 @@ h2 {
 
 	.taste-of-oviedo-text {
 		// width: 80%;
+	}
+
+	#nf-form-3-cont {
+		display: none;
 	}
 }
 

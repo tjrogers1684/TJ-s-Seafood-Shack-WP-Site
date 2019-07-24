@@ -7,7 +7,7 @@ h2 {
 
 .feature-wrap-outer {
   position: relative; }
-  .feature-wrap-outer:after {
+  .feature-wrap-outer .feature-wrap:after {
     content: '';
     position: absolute;
     bottom: 2rem;
@@ -19,7 +19,7 @@ h2 {
     -webkit-transform: skew(0, -2deg) translateX(-50%);
             transform: skew(0, -2deg) translateX(-50%);
     box-shadow: 0 9px 17px rgba(0, 0, 0, 0.2);
-    z-index: 0; }
+    z-index: 1; }
 
 .homepage-acllouts {
   display: -webkit-box;
@@ -135,6 +135,8 @@ h2 {
     position: absolute;
     top: 1rem;
     left: -5.5rem; }
+  .taste-of-oviedo-section #nf-form-3-cont {
+    display: none; }
 
 /* --------------------------------------------- SHELLS POSITIONING -- */
 .floating-image-hidden-container {

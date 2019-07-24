@@ -96,15 +96,13 @@
 			<div class="social-links">
 				<a class="social-link facebook" href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
 				<a class="social-link twitter" href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
-				<a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a>
 			</div>
 		</div>
 
 		<div class="footer-section footer-contact">
 
 			<div class="newsletter-signup">
-				<p class="form-label">Sign up for news, updates, and offers:</p>
-				<p class="form-input">Email address...</p>
+				<?php echo do_shortcode('[ninja_form id=3]'); ?>
 			</div>
 
 			<div class="contact-info-hours">
