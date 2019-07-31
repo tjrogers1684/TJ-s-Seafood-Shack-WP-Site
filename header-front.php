@@ -14,7 +14,6 @@ $addl_body_classes[] = 'section-'.explode('/', $_SERVER['REQUEST_URI'])[1];
 if( !empty(explode('/', $_SERVER['REQUEST_URI'])[2]) && !strstr(explode('/', $_SERVER['REQUEST_URI'])[2], '?') ){
 	$addl_body_classes[] = 'section-'.explode('/', $_SERVER['REQUEST_URI'])[1].'-'.explode('/', $_SERVER['REQUEST_URI'])[2];
 }
-$addl_body_classes[] = 'not-front';
 
 if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 ?>
@@ -24,19 +23,20 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 	</nav>
 
+	<?php // -------------- SPECIALS BANNER -- ?>
 	<?php
-	// ---------------------------------------------------------------------------------
-	// ----- SPECIALS BANNER -----------------------------------------------------------
-	// ---------------------------------------------------------------------------------
-	// ----- QUERIES -----
-	$hp_specials_banner_args = [
-		'post_type' => 'specials',
-		'posts_per_page' => '7',
-		'order' => 'DESC',
-		'orderby' => 'date',
-	];
-	// The Query
-	$hp_specials_banner_query = new WP_Query( $hp_specials_banner_args );
+
+		// ------------------------------- QUERIES ----
+		// ----- WEEKLY SPECIALS QUERY ----
+		$hp_specials_banner_args = [
+			'post_type' => 'specials',
+			'posts_per_page' => '7',
+			'order' => 'DESC',
+			'orderby' => 'date',
+		];
+
+		// The Query
+		$hp_specials_banner_query = new WP_Query( $hp_specials_banner_args );
 
 	?>
 

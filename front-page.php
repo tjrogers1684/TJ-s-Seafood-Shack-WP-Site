@@ -1,4 +1,4 @@
-<?php get_header();
+<?php get_header('front');
 // ---------------------------------------------------------------------------------
 // ----- HOMEPAGE THEME ------------------------------------------------------------
 // ---------------------------------------------------------------------------------
@@ -55,13 +55,57 @@
 			        	<p>Even though TJ's Seafood Shack is a casual seafood restaurant in the Orlando suburb of Oviedo, it is evident that the owners are serious about their business - winning the restaurant category of "Taste of Oviedo" every year since 2009!</p>
 
 			        	<p><a href="/about" class="btn hp-callout-about"><i class="fas fa-utensils"></i> About TJs Seafood Shack</a></p>
-
-			        	<?php echo do_shortcode('[ninja_form id=3]'); ?>
 			        </div>
 		        </div>
 			</div>
 
 		</div>
 	</div>
+
+	<?php
+		// ------------------------------- QUERIES ----
+		// ----- WEEKLY SPECIALS QUERY ----
+		$hp_specials_args = [
+			'post_type' => 'specials',
+//			'posts_per_page' => '7',
+			'order' => 'DESC',
+			'orderby' => 'date',
+		];
+
+		// The Query
+		$hp_specials_query = new WP_Query( $hp_specials_args );
+
+		// ------------------------------- WEEKLY SPECIALS -- ?>
+		<a name="specials"></a>
+		<div class="weekly-specials-container">
+			<div class="weekly-specials">
+				<div class="weekly-specials-heading">
+					<h2>TJ’s Seafood Oviedo Weekly Specials</h2>
+					<p class="font-alt"><i class="fas fa-calendar-alt fa-sm"></i> Closed Sundays</p>
+				</div>
+
+				<div class="weekly-specials-days">
+					<?php
+						$day = 1;
+						if ( $hp_specials_query->have_posts() ) : while ($hp_specials_query->have_posts() ) : $hp_specials_query->the_post(); ?>
+
+						<?php
+							$special_meta = get_post_meta( $post->ID );
+							$specials_day = date('N');
+							?>
+
+						<div class="weekly-specials-day day-<?php echo $day; ?> <?php if( $specials_day == $day && $specials_day < 6 ) { echo 'today'; } ?>">
+							<h3><?php the_title(); ?></h3>
+							<p><?php echo get_field('specials_description'); ?></p>
+						</div>
+
+						<?php $day++; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endwhile; else : ?>
+					<?php endif; ?>
+
+				</div>
+			</div>
+		</div>
 
 <?php get_footer(); ?>
