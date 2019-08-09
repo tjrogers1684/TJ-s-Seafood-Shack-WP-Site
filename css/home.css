@@ -23,19 +23,14 @@ h2 {
 
 .homepage-acllouts {
   display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
           align-items: center;
   margin: 3rem 0 0; }
   .homepage-acllouts .hp-callout {
@@ -46,6 +41,7 @@ h2 {
     /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #06db8e 0%, #08e7b4 100%);
     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#06db8e), to(#08e7b4));
     background: linear-gradient(to right, #06db8e 0%, #08e7b4 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06db8e', endColorstr='#08e7b4',GradientType=1 );
@@ -64,6 +60,7 @@ h2 {
       /* FF3.6-15 */
       background: -webkit-linear-gradient(left, #048658 0%, #06ae84 100%);
       /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, right top, from(#048658), to(#06ae84));
       background: linear-gradient(to right, #048658 0%, #06ae84 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048658', endColorstr='#06ae84',GradientType=1 );
@@ -75,6 +72,7 @@ h2 {
       /* FF3.6-15 */
       background: -webkit-linear-gradient(left, #f39717 0%, #f7b923 100%);
       /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, right top, from(#f39717), to(#f7b923));
       background: linear-gradient(to right, #f39717 0%, #f7b923 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39717', endColorstr='#f7b923',GradientType=1 );
@@ -86,6 +84,7 @@ h2 {
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, #048658 0%, #06ae84 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(#048658), to(#06ae84));
         background: linear-gradient(to right, #048658 0%, #06ae84 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048658', endColorstr='#06ae84',GradientType=1 );
@@ -115,19 +114,14 @@ h2 {
 
 .taste-of-oviedo-section {
   display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
           justify-content: flex-end;
   -webkit-box-align: center;
-  -webkit-align-items: center;
           align-items: center;
   position: relative;
   padding: 7.05rem 1.5rem 9.41rem 27.5rem; }

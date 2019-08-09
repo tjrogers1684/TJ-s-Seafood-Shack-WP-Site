@@ -22,65 +22,83 @@ get_header();
 			<?php endwhile; ?><!-- PAGE MAIN QUERY -->
 
 			<!-- ARTICLES LISTING -->
-			<div class="academic-links-listing-container">
+			<div class="menu-items-categories-container">
 
-				<div class="academic-links-listing">
-					<?php $menu_types = get_terms('menu_item_type', array('hide_empty' => 0, 'parent' =>0)); foreach($menu_types as $menu_type) : ?>
+				<?php $menu_types = get_terms('menu_item_type', array('hide_empty' => 0, 'parent' =>0)); foreach($menu_types as $menu_type) : ?>
 
-						<?php
+					<?php
 
-							$term_slug = $menu_type->slug;
+						// ---- CATEGORY VARIABLES --
+						$category_slug = $menu_type->slug;
+						$category_name = $menu_type->name;
 
-							//echo '<pre>'. print_r( $menu_type, true) .'</pre>';
-							echo '<p>'. $term_slug .'</p>';
+						//echo '<pre>'. print_r( $menu_type, true) .'</pre>';
+						//echo '<p>'. $term_slug .'</p>';
 
-							// ----- STEM ARTICLES QUERY ----
-							// $menu_items_listing_args = [
-							// 	'post_type' => 'menu_item',
-							// 	'orderby'	=> 'title',
-							// 	'order'		=> 'ASC',
-							// 	'posts_per_page' => 600,
-							// 	'tax_query' => array(
-							//         array(
-							//             'taxonomy' => 'menu_item_type',
-							//             'field'    => 'slug',
-							//             'terms'    => $term_slug,
-							//         ),
-							//     ),
-							// ];
-
-							$post_args = array(
-								'posts_per_page' => 50,
-								'post_type' => 'menu_item', // you can change it according to your custom post type
-								'tax_query' => array(
-									array(
-										'taxonomy' => 'menu_item_type', // you can change it according to your taxonomy
-										'field' => 'slug', // this can be 'term_id', 'slug' & 'name'
-										'terms' => $term_slug,
-									)
+						$menu_item_args = array(
+							'posts_per_page' => 100,
+							'post_type' => 'menu_item', // you can change it according to your custom post type
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'menu_item_type', // you can change it according to your taxonomy
+									'field' => 'slug', // this can be 'term_id', 'slug' & 'name'
+									'terms' => $category_slug,
 								)
-							);
+							)
+						);
 
-							// The Query
-							//$menu_items_listing_query = new WP_Query( $menu_items_listing_args );
+						// The Query
+						//$menu_items_listing_query = new WP_Query( $menu_items_listing_args );
 
-							$myposts = get_posts($post_args);
+						$menu_items = get_posts($menu_item_args);
 
-						?>
+						// ---- CATEGORY VARIABLES --
+						foreach ( $menu_items as $post ) : setup_postdata( $post );
+								$post_meta = get_post_meta($post->ID);
 
-					<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-						<div class="link-item">
-							<h2 class="link-item-title"><?php the_title(); ?></h2>
-						</div>
-					<?php endforeach; // Term Post foreach ?>
+								//echo '<pre>'. print_r( $post_meta, true) .'</pre>';
+						endforeach;
 
-					<?php wp_reset_postdata(); ?>
+					?>
 
-					<?php endforeach; // End Term foreach; ?> 
+					<div class="menu-items-category <?php echo $category_slug; ?>">
+						<h2><?php echo $category_name ?></h2>
 
-				</div><!-- END MEMBERS LISTING -->
-			</div><!-- END MEMBERS LISTING CONTAINER -->
-		</div><!-- END CONTENT AREA -->
+						<div class="menu-items-listing">
+							<?php foreach ( $menu_items as $post ) : setup_postdata( $post ); ?>
+								<?php
+									$post_meta = get_post_meta($post->ID);
+									$new_item = get_field('item_info_group_menu_item_type_new_menu_item');
+									$featured_item = get_field('item_info_group_menu_item_type_featured_menu_item');
+									$featured_img = get_the_post_thumbnail_url(get_the_ID(),'full');
+
+									//echo '<pre>'. print_r( $new, true) .'</pre>';
+								?>
+
+								<div class="menu-item<?php if( $new_item == 1 ) { echo ' new-item'; } ?><?php if( $featured_item == 1 ) { echo ' featured-item'; } ?>">
+									<?php if( $new_item == 1 ) { ?>
+										<p class="new-item-banner">New</p>
+									<?php } ?>
+
+									<?php if( $featured_item == 1 ) { ?>
+										<p class="featured-item-image"><img src="<?php echo $featured_img; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"></p>
+									<?php } ?>
+
+									<h3 class="menu-item-title"><?php the_title(); ?></h3>
+
+									<?php the_excerpt(); ?>
+								</div>
+							<?php endforeach; // Term Menu Item foreach ?>
+
+							<?php wp_reset_postdata(); ?>
+						</div><?php // END MENU ITEMS LISTING ?>
+
+					</div><?php // END MENU CATEGORY ?>
+
+				<?php endforeach; // End Category foreach; ?> 
+
+			</div><?php // END MENU CATEGORIES CONTAINER ?>
+		</div><?php // END CONTENT AREA ?>
 
 	<?php } ?>
 
