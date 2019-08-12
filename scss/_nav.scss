@@ -35,6 +35,8 @@
 		}
 
 		&.current-menu-item a {
+			background: $brand-dk;
+			color: #fff;
 		}
 
 		&.menu-item-has-children {

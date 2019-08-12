@@ -268,13 +268,19 @@ hr {
 
 .not-front .content-wrap {
 	padding: 3rem 1.75rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .content-area {
 	width: 100%;
 
 	&.has-sidebar {
-
+		width: 66%;
+		padding-right: 1.5rem;
 	}
 }
 
@@ -284,6 +290,7 @@ hr {
 }
 
 .sidebar-area {
+	width: 33%;
 }
 
 
