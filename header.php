@@ -125,18 +125,18 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
     <?php } else { ?>
     	<div class="feature-wrap-outer">
     		<div class="feature-wrap">
-				<div class="floating-image-container shrimp">
-		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
-		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
-		    	</div>
-
-	    		<div class="subfeature feat-hp">
+				<div class="subfeature feat-hp">
 		    		<p>&nbsp;</p>
 		    	</div>
 	    	</div>
 
 	    	<div class="floating-image-container lemon">
 	    		<img class="line-icon-lemon" src="/wp-content/themes/tjs/images/line-icon-lemon.png">
+
+	    		<div class="shrimp-container">
+		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    	</div>
 	    	</div>
     	</div>
 	<?php } ?>
