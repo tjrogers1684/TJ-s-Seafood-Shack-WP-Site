@@ -42,6 +42,9 @@
 
 					// check if the repeater field has rows of data
 					if( have_rows('food_truck_menu_item') ):
+
+					$menu_item = get_field('food_truck_menu_item');
+					//echo '<p>Menu Item Meta</p><pre>'.print_r($menu_item, true). '</pre>';
 				?>
 
 				<div class="food-truck-menu-container">
@@ -57,24 +60,28 @@
 							$menu_item_price = get_sub_field('food_truck_menu_item_price');
 							$menu_item_price_tier_2 = get_sub_field('food_truck_menu_item_price_tier_2');
 							$menu_item_image = get_sub_field('food_truck_menu_item_picture');
+							$menu_item_availability = get_sub_field('food_truck_menu_item_currently_available');
+							$menu_item_availability = $menu_item_availability['0'];
 
 					?>
 
-						<div class="menu-item">
-							<div class="menu-item-photo">
-								<img src="<?php echo $menu_item_image['url']; ?>" alt="<?php echo $menu_item_image['alt'] ?>" />
-							</div>
+						<?php if ( $menu_item_availability == 'available' ) { ?>
+							<div class="menu-item">
+								<div class="menu-item-photo">
+									<img src="<?php echo $menu_item_image['url']; ?>" alt="<?php echo $menu_item_image['alt'] ?>" />
+								</div>
 
-							<div class="menu-item-content">
-								<p class="menu-item-name"><?php echo $menu_item_name; ?></p>
-								<p class="menu-item-price">
-									<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
-									<?php if( $menu_item_price_tier_2 ): ?>
-										<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
-									<?php endif; ?>
-								</p>
+								<div class="menu-item-content">
+									<p class="menu-item-name"><?php echo $menu_item_name; ?></p>
+									<p class="menu-item-price">
+										<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
+										<?php if( $menu_item_price_tier_2 ): ?>
+											<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
+										<?php endif; ?>
+									</p>
+								</div>
 							</div>
-						</div>
+						<?php } ?>
 
 						<?php endwhile; ?>
 

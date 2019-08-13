@@ -22,16 +22,26 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* ----- floats ----- */
 
 .flt-right,
-.fltRight {
+.fltRight,
+.alignright {
   float: right;
   margin: 0 0 0 15px;
 }
 
 @media (max-width: 560px) {
   .flt-right,
-  .fltRight {
-    float: none;
-    margin: 0;
+  .fltRight,
+  .alignright {
+    float: none !important;
+    margin: 0 !important;
+  }
+
+  .alignright {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
