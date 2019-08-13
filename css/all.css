@@ -308,7 +308,7 @@ img {
   .specials-banner-wrap-outer .specials-banner-wrap {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     color: #fff;
     display: -webkit-box;
     display: flex;
@@ -321,6 +321,10 @@ img {
     -webkit-box-align: center;
             align-items: center;
     position: relative; }
+    @media (max-width: 700px) {
+      .specials-banner-wrap-outer .specials-banner-wrap {
+        -webkit-box-pack: start;
+                justify-content: flex-start; } }
     .specials-banner-wrap-outer .specials-banner-wrap .special-today {
       font-size: 1.5rem;
       font-weight: 100;
@@ -399,6 +403,9 @@ img {
         @media (max-width: 1240px) {
           .header-wrap-outer .header-wrap .site-logo img {
             max-width: 240px; } }
+        @media (max-width: 700px) {
+          .header-wrap-outer .header-wrap .site-logo img {
+            top: -1rem; } }
         .header-wrap-outer .header-wrap .site-logo img:hover {
           -webkit-transform: rotate(10deg) scale(1.05);
                   transform: rotate(10deg) scale(1.05);
