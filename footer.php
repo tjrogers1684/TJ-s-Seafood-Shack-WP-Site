@@ -57,7 +57,7 @@
 					<p class="footer-contact-phone">407-365-3365</p>
 
 					<p class="footer-contact-address">
-						197 E. Mitchell Hammock Rd<br/>
+						197 E. Mitchell Hammock&nbsp;Rd<br/>
 						Oviedo, FL 32765
 					</p>
 				</div>
