@@ -72,7 +72,7 @@
 								    if( $menu_item_category == 'seafood' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
 								    if( $menu_item_category == 'chicken' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/chicken.svg" />'; }
 								    if( $menu_item_category == 'sanwichs' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/sanwich.svg" />'; }
-								    if( $menu_item_category == 'kids' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
+								    if( $menu_item_category == 'kids' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/family.svg" />'; }
 								    if( $menu_item_category == 'dessert' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
 								    if( $menu_item_category == 'burgers' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/hamburger.svg" />'; }
 
