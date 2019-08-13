@@ -62,19 +62,57 @@
 							$menu_item_image = get_sub_field('food_truck_menu_item_picture');
 							$menu_item_availability = get_sub_field('food_truck_menu_item_currently_available');
 							$menu_item_availability = $menu_item_availability['0'];
+							$menu_item_categories = get_sub_field('food_truck_menu_item_category');
+
+							if($menu_item_categories){
+							    foreach ($menu_item_categories as $menu_item_category){
+								    if( $menu_item_category == 'fish' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
+								    if( $menu_item_category == 'tacos' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
+								    if( $menu_item_category == 'shrimp' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/shrimp.svg" />'; }
+								    if( $menu_item_category == 'seafood' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
+								    if( $menu_item_category == 'chicken' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/chicken.svg" />'; }
+								    if( $menu_item_category == 'sanwichs' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/sanwich.svg" />'; }
+								    if( $menu_item_category == 'kids' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
+								    if( $menu_item_category == 'dessert' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
+								    if( $menu_item_category == 'burgers' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/hamburger.svg" />'; }
+
+								    //echo $menu_item_category . ',<br/>';
+							    }
+							}
+
 
 					?>
 
 						<?php if ( $menu_item_availability == 'available' ) { ?>
-							<p class="menu-item">
-								<span class="menu-item-name"><?php echo $menu_item_name; ?></span>
-								<span class="menu-item-leading-dots">&nbsp;</span>
-								<span class="menu-item-price">
-									<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
-									<?php if( $menu_item_price_tier_2 ): ?>
-										<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
-									<?php endif; ?>
-							</p>
+							<div class="menu-item">
+								<?php if($menu_item_categories) { ?>
+
+									<p class="menu-item-categories">
+										<?php
+										    foreach ($menu_item_categories as $menu_item_category) {
+											    if( $menu_item_category == 'fish' ) { echo '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
+											    if( $menu_item_category == 'tacos' ) { echo '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
+											    if( $menu_item_category == 'shrimp' ) { echo '<img src="/wp-content/themes/tjs/images/shrimp.svg" />'; }
+											    if( $menu_item_category == 'seafood' ) { echo '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
+											    if( $menu_item_category == 'chicken' ) { echo '<img src="/wp-content/themes/tjs/images/chicken.svg" />'; }
+											    if( $menu_item_category == 'sanwichs' ) { echo '<img src="/wp-content/themes/tjs/images/sanwich.svg" />'; }
+											    if( $menu_item_category == 'kids' ) { echo '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
+											    if( $menu_item_category == 'dessert' ) { echo '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
+											    if( $menu_item_category == 'burgers' ) { echo '<img src="/wp-content/themes/tjs/images/hamburger.svg" />'; }
+									     	}
+									     ?>
+								     </p>
+								<?php } ?>
+								<div class="menu-item-info">
+									<span class="menu-item-name"><?php echo $menu_item_name; ?></span>
+									<span class="menu-item-leading-dots">&nbsp;</span>
+									<span class="menu-item-price">
+										<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
+										<?php if( $menu_item_price_tier_2 ): ?>
+											<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
+										<?php endif; ?>
+									</div>
+							</div>
 						<?php } ?>
 
 						<?php endwhile; ?>

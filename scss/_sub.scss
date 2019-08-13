@@ -185,65 +185,82 @@
 	min-height: 70%;
 
 	.menu-item {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-		position: relative;
-
 		& + .menu-item {
-			margin-top: 0.75rem;
+			margin-top: 1.25rem;
 		}
 
-		span {
-			display: block;
+		.menu-item-categories {
+			line-height: 0;
+			margin-bottom: -0.25rem;
+			position: relative;
+			z-index: 5;
 
-			&.menu-item-leading-dots {
-				position: absolute;
-				width: 100%;
-				vertical-align:bottom;
-				background-image:radial-gradient($brand-alt 2px, white 1px);
-				background-size: 8px 8px;
-				background-repeat:repeat-x;
-				background-position: left bottom;
+			img {
+				max-width: 30px;
 
-				@media (max-width: 540px) {
-					display: none;
+				& + img {
+					margin-left: 0.5rem;
 				}
 			}
 		}
 
-		.menu-item-name,
-		.menu-item-price {
+		.menu-item-info {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
 			position: relative;
-			z-index: 2;
-			background: #fff;
-			padding: 0.25rem;
-
-			@media (max-width: 540px) {
-				width: 100% !important;
-				max-width: none !important;
-			}
-		}
-
-		.menu-item-name {
-			position: relative;
-			font-weight: bold;
-			line-height: 1.25;
-			font-size: 1.25em;
-			z-index: 2;
-			max-width: 300px;
-		}
-
-		.menu-item-price {
-			position: relative;
-			font-style: italic;
-			z-index: 2;
-			max-width: 130px;
 
 			span {
 				display: block;
+
+				&.menu-item-leading-dots {
+					position: absolute;
+					width: 100%;
+					vertical-align:bottom;
+					background-image:radial-gradient($brand-alt 2px, white 1px);
+					background-size: 8px 8px;
+					background-repeat:repeat-x;
+					background-position: left bottom;
+
+					@media (max-width: 540px) {
+						display: none;
+					}
+				}
+			}
+
+			.menu-item-name,
+			.menu-item-price {
+				position: relative;
+				z-index: 2;
+				background: #fff;
+				padding: 0.25rem;
+
+				@media (max-width: 540px) {
+					width: 100% !important;
+					max-width: none !important;
+				}
+			}
+
+			.menu-item-name {
+				position: relative;
+				font-weight: bold;
+				line-height: 1.125;
+				font-size: 1.125em;
+				z-index: 2;
+				max-width: 300px;
+			}
+
+			.menu-item-price {
+				position: relative;
+				font-style: italic;
+				z-index: 2;
+				max-width: 130px;
+
+				span {
+					display: block;
+				}
 			}
 		}
 	}

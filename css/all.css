@@ -988,7 +988,18 @@ img {
   box-shadow: 0 1rem 1.25rem -12px rgba(0, 0, 0, 0.2);
   padding: 2rem 1.5rem 2rem;
   min-height: 70%; }
-  .food-truck-menu-container .menu-item {
+  .food-truck-menu-container .menu-item + .menu-item {
+    margin-top: 1.25rem; }
+  .food-truck-menu-container .menu-item .menu-item-categories {
+    line-height: 0;
+    margin-bottom: -0.25rem;
+    position: relative;
+    z-index: 5; }
+    .food-truck-menu-container .menu-item .menu-item-categories img {
+      max-width: 30px; }
+      .food-truck-menu-container .menu-item .menu-item-categories img + img {
+        margin-left: 0.5rem; }
+  .food-truck-menu-container .menu-item .menu-item-info {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -1000,11 +1011,9 @@ img {
     -webkit-box-align: start;
             align-items: flex-start;
     position: relative; }
-    .food-truck-menu-container .menu-item + .menu-item {
-      margin-top: 0.75rem; }
-    .food-truck-menu-container .menu-item span {
+    .food-truck-menu-container .menu-item .menu-item-info span {
       display: block; }
-      .food-truck-menu-container .menu-item span.menu-item-leading-dots {
+      .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
         position: absolute;
         width: 100%;
         vertical-align: bottom;
@@ -1014,32 +1023,32 @@ img {
         background-repeat: repeat-x;
         background-position: left bottom; }
         @media (max-width: 540px) {
-          .food-truck-menu-container .menu-item span.menu-item-leading-dots {
+          .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
             display: none; } }
-    .food-truck-menu-container .menu-item .menu-item-name,
-    .food-truck-menu-container .menu-item .menu-item-price {
+    .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
+    .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
       position: relative;
       z-index: 2;
       background: #fff;
       padding: 0.25rem; }
       @media (max-width: 540px) {
-        .food-truck-menu-container .menu-item .menu-item-name,
-        .food-truck-menu-container .menu-item .menu-item-price {
+        .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
+        .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
           width: 100% !important;
           max-width: none !important; } }
-    .food-truck-menu-container .menu-item .menu-item-name {
+    .food-truck-menu-container .menu-item .menu-item-info .menu-item-name {
       position: relative;
       font-weight: bold;
-      line-height: 1.25;
-      font-size: 1.25em;
+      line-height: 1.125;
+      font-size: 1.125em;
       z-index: 2;
       max-width: 300px; }
-    .food-truck-menu-container .menu-item .menu-item-price {
+    .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
       position: relative;
       font-style: italic;
       z-index: 2;
       max-width: 130px; }
-      .food-truck-menu-container .menu-item .menu-item-price span {
+      .food-truck-menu-container .menu-item .menu-item-info .menu-item-price span {
         display: block; }
 
 /* --------------------------------------------- SCHEDULE/EVENTS -- */
