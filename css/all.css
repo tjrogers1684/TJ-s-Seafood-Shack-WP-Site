@@ -452,6 +452,9 @@ img {
   .content-area.has-sidebar {
     width: 66%;
     padding-right: 1.5rem; }
+    @media (max-width: 800px) {
+      .content-area.has-sidebar {
+        width: 100%; } }
 
 .not-front .content-area {
   max-width: 900px;
@@ -459,6 +462,10 @@ img {
 
 .sidebar-area {
   width: 33%; }
+  @media (max-width: 800px) {
+    .sidebar-area {
+      width: 100%;
+      margin-top: 3rem; } }
 
 .weekly-specials-container {
   background: #f5a81d url("/wp-content/themes/tjs/images/bkd-weekly-specials.jpg") no-repeat center center;
@@ -859,9 +866,11 @@ img {
 
 /* --------------------------------------------- SCHEDULE/EVENTS -- */
 .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item {
-  padding: 1rem; }
+  padding: 0 1rem 1rem 1rem; }
   .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item:nth-child(even) {
     background: #fff; }
+  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item + .event-item {
+    padding: 1rem; }
   .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container {
     margin-bottom: 1rem;
     position: relative;
@@ -873,13 +882,13 @@ img {
       top: 0;
       left: 0; }
       .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-calendar-icon-container i {
-        -webkit-transform: translateY(-0.15rem);
-                transform: translateY(-0.15rem);
+        -webkit-transform: translateY(0.25rem);
+                transform: translateY(0.25rem);
         color: #005978; }
     .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-name {
       font-weight: bold;
       line-height: 1.25;
-      font-size: 1.5em; }
+      font-size: 1.35em; }
       .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-name + .event-item-date {
         margin-top: 0.25rem;
         font-size: 1.125em;

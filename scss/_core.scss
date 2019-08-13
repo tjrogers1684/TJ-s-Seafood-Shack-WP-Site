@@ -281,6 +281,10 @@ hr {
 	&.has-sidebar {
 		width: 66%;
 		padding-right: 1.5rem;
+
+		@media (max-width: 800px) {
+			width: 100%;
+		}
 	}
 }
 
@@ -291,6 +295,11 @@ hr {
 
 .sidebar-area {
 	width: 33%;
+
+	@media (max-width: 800px) {
+		width: 100%;
+		margin-top: 3rem;
+	}
 }
 
 

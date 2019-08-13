@@ -224,7 +224,7 @@
 .food-truck-page-events-listing-container {
 	.food-truck-page-events-listing {
 		.event-item {
-			padding: 1rem;
+			padding: 0 1rem 1rem 1rem;
 
 			&:nth-child(even) {
 				background: #fff;
@@ -232,8 +232,7 @@
 			}
 
 			& + .event-item {
-				// margin-top: 1rem;
-				// border-top: 1px solid #ddd;
+				padding: 1rem;
 			}
 
 			.event-item-name-date-icon-container {
@@ -249,7 +248,7 @@
 					left: 0;
 
 					i {
-						transform: translateY(-0.15rem);
+						transform: translateY(0.25rem);
 						color: $brand-blue;
 					}
 				}
@@ -257,7 +256,7 @@
 				.event-item-name {
 					font-weight: bold;
 					line-height: 1.25;
-					font-size: 1.5em;
+					font-size: 1.35em;
 
 
 					& + .event-item-date {
