@@ -191,11 +191,23 @@
 		padding: 1rem;
 		margin-bottom: 0.75rem;
 
+		@media (max-width: 800px) {
+			width: 100%;
+		}
+
 		div {
 			width: calc( 60% - 0.5rem );
 
+			@media (max-width: 540px) {
+				width: 100% !important;
+			}
+
 			&.menu-item-photo {
 				width: calc( 40% - 0.5rem );
+
+				@media (max-width: 540px) {
+					margin-bottom: 1rem;
+				}
 			}
 
 			&.menu-item-content {

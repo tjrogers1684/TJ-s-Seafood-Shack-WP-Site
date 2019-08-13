@@ -461,7 +461,8 @@ img {
     padding-right: 1.5rem; }
     @media (max-width: 800px) {
       .content-area.has-sidebar {
-        width: 100%; } }
+        width: 100%;
+        padding-right: 0; } }
 
 .not-front .content-area {
   max-width: 900px;
@@ -856,10 +857,19 @@ img {
   box-shadow: 0 1rem 1.25rem -12px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   margin-bottom: 0.75rem; }
+  @media (max-width: 800px) {
+    .food-truck-menu-container .menu-item {
+      width: 100%; } }
   .food-truck-menu-container .menu-item div {
     width: calc( 60% - 0.5rem ); }
+    @media (max-width: 540px) {
+      .food-truck-menu-container .menu-item div {
+        width: 100% !important; } }
     .food-truck-menu-container .menu-item div.menu-item-photo {
       width: calc( 40% - 0.5rem ); }
+      @media (max-width: 540px) {
+        .food-truck-menu-container .menu-item div.menu-item-photo {
+          margin-bottom: 1rem; } }
     .food-truck-menu-container .menu-item div.menu-item-content .menu-item-name {
       font-weight: bold;
       line-height: 1.25;
