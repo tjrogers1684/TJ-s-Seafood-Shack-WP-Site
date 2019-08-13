@@ -110,11 +110,19 @@
 
 					<div class="event-item">
 						<div class="event-item-content">
-							<p class="event-item-name"><?php the_title(); ?></p>
+							<div class="event-item-name-date-icon-container">
+								<div class="event-item-calendar-icon-container">
+									<i class="fas fa-calendar-week"></i>
+								</div>
+								<div class="event-item-name-date-container">
+									<p class="event-item-name"> <?php the_title(); ?></p>
+									<p class="event-item-date"> <?php echo $event_date; ?></p>
+								</div>
+							</div>
 
-							<p class="event-item-date"> <?php echo $event_date; ?></p>
-
-							<p class="event-item-location"><i class="fas fa-map-pin"></i> <?php echo $event_location; ?></p>
+							<div class="event-item-location-container">
+								<p class="event-item-location"><i class="fas fa-map-pin"></i> <?php echo $event_location; ?></p>
+							</div>
 						</div>
 					</div>
 

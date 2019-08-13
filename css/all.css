@@ -30,7 +30,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   float: right;
   margin: 0 0 0 15px; }
 
-@media (max-width: 650px) {
+@media (max-width: 560px) {
   .flt-right,
   .fltRight {
     float: none;
@@ -40,7 +40,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   float: left;
   margin: 0 15px 0 0; }
 
-@media (max-width: 650px) {
+@media (max-width: 560px) {
   .flt-left,
   .fltLeft {
     float: none;
@@ -825,8 +825,9 @@ img {
   .page-id-14 .content-wrap .nf-form-cont select {
     padding: 0.75rem; }
 
+/* --------------------------------------------- MENU -- */
 .food-truck-menu-container .menu-item {
-  width: calc( 80% - 0.5rem );
+  width: calc( 100% - 0.5rem );
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -840,9 +841,11 @@ img {
   background: #fff;
   box-shadow: 0 1rem 1.25rem -12px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.75rem; }
   .food-truck-menu-container .menu-item div {
-    width: calc( 50% - 1rem ); }
+    width: calc( 60% - 0.5rem ); }
+    .food-truck-menu-container .menu-item div.menu-item-photo {
+      width: calc( 40% - 0.5rem ); }
     .food-truck-menu-container .menu-item div.menu-item-content .menu-item-name {
       font-weight: bold;
       line-height: 1.25;
@@ -854,23 +857,38 @@ img {
       .food-truck-menu-container .menu-item div.menu-item-content .menu-item-price span {
         display: block; }
 
+/* --------------------------------------------- SCHEDULE/EVENTS -- */
 .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item {
   padding: 1rem; }
-  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item + .event-item {
-    margin-top: 1rem;
-    border-top: 1px solid #ddd; }
-  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name {
-    font-weight: bold;
-    line-height: 1.25;
-    font-size: 1.5em; }
-    .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name + .event-item-date {
-      margin-top: 0;
-      font-size: 1.125em;
-      font-style: italic; }
-      .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name + .event-item-date + .event-item-location {
+  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item:nth-child(even) {
+    background: #fff; }
+  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+    line-height: 1; }
+    .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-calendar-icon-container {
+      font-size: 1.75em;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-calendar-icon-container i {
+        -webkit-transform: translateY(-0.15rem);
+                transform: translateY(-0.15rem);
+        color: #005978; }
+    .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-name {
+      font-weight: bold;
+      line-height: 1.25;
+      font-size: 1.5em; }
+      .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name-date-icon-container .event-item-name + .event-item-date {
+        margin-top: 0.25rem;
+        font-size: 1.125em;
+        font-style: italic;
         color: #888; }
-        .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-name + .event-item-date + .event-item-location i {
-          margin-right: 0.25rem;
-          color: #f5a81d; }
+  .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-location-container {
+    padding-left: 2.5rem; }
+    .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item .event-item-location-container i {
+      margin-right: 0.25rem;
+      color: #f5a81d; }
 
 /*# sourceMappingURL=all.css.map */

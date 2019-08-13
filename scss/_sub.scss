@@ -177,15 +177,10 @@
 // ---------------------------------------------------------------------------------
 // ----- FOOD TRUCK PAGE -----------------------------------------------------------
 // ---------------------------------------------------------------------------------
+/* --------------------------------------------- MENU -- */
 .food-truck-menu-container {
-	// display: flex;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	// justify-content: space-between;
-	// align-items: stretch;
-
 	.menu-item {
-		width: calc( 80% - 0.5rem );
+		width: calc( 100% - 0.5rem );
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -194,10 +189,14 @@
 		background: #fff;
 		@include drop_shadow();
 		padding: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.75rem;
 
 		div {
-			width: calc( 50% - 1rem );
+			width: calc( 60% - 0.5rem );
+
+			&.menu-item-photo {
+				width: calc( 40% - 0.5rem );
+			}
 
 			&.menu-item-content {
 				.menu-item-name {
@@ -220,34 +219,62 @@
 	}
 }
 
+
+/* --------------------------------------------- SCHEDULE/EVENTS -- */
 .food-truck-page-events-listing-container {
 	.food-truck-page-events-listing {
 		.event-item {
 			padding: 1rem;
 
-			& + .event-item {
-				margin-top: 1rem;
-				border-top: 1px solid #ddd;
+			&:nth-child(even) {
+				background: #fff;
+				//@include drop_shadow();
 			}
 
-			.event-item-name {
-				font-weight: bold;
-				line-height: 1.25;
-				font-size: 1.5em;
+			& + .event-item {
+				// margin-top: 1rem;
+				// border-top: 1px solid #ddd;
+			}
 
-				& + .event-item-date {
-					margin-top: 0;
-					font-size: 1.125em;
-					font-style: italic;
+			.event-item-name-date-icon-container {
+				margin-bottom: 1rem;
+				position: relative;
+				padding-left: 2.5rem;
+				line-height: 1;
 
-					& + .event-item-location {
-						color: #888;
+				.event-item-calendar-icon-container {
+					font-size: 1.75em;
+					position: absolute;
+					top: 0;
+					left: 0;
 
-						i {
-							margin-right: 0.25rem;
-							color: $brand-alt;
-						}
+					i {
+						transform: translateY(-0.15rem);
+						color: $brand-blue;
 					}
+				}
+
+				.event-item-name {
+					font-weight: bold;
+					line-height: 1.25;
+					font-size: 1.5em;
+
+
+					& + .event-item-date {
+						margin-top: 0.25rem;
+						font-size: 1.125em;
+						font-style: italic;
+						color: #888;
+					}
+				}
+			}
+
+			.event-item-location-container {
+				padding-left: 2.5rem;
+
+				i {
+					margin-right: 0.25rem;
+					color: $brand-alt;
 				}
 			}
 		}
