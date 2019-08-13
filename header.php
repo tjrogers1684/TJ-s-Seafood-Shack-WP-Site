@@ -22,6 +22,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 <body <?php body_class( $addl_body_classes ); ?>>
 	<nav class="mobile-nav">
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+		<a class="mobile-nav-close" href="#mobilenavclose"><i class="fa fa-times"></i> Close</a>
 	</nav>
 
 	<?php
@@ -98,8 +99,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	        <nav class="top-nav">
 	            <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 	        </nav>
-	        <a class="mobile-nav-activate" href="#mobilenav"><i class="fa fa-bars"></i> Menu</a>
-	        <a class="mobile-nav-close" href="#mobilenavclose"><i class="fa fa-times"></i> Close</a>
+	        <a class="mobile-nav-activate" href="#mobilenav"><i class="fa fa-bars"></i></a>
 
 	    </div><!-- END HEADER WRAP -->
 	</div><!-- END HEADER WRAP OUTER -->

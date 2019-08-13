@@ -7,6 +7,10 @@
 	position: relative;
 	z-index: 5;
 
+	@media (max-width: 900px) {
+		display: none;
+	}
+
 	ul,
 	ul li {
 		margin: 0;
@@ -105,7 +109,6 @@
 			font-weight: bold;
 			display: block;
 			padding: 0.5rem;
-			text-shadow: 0 0 2px rgba(228, 230, 225, 0.7);
 		}
 
 		&:hover a {
@@ -129,7 +132,29 @@
 // ----- MOBILE NAV ----------------------------------------------------------------
 // ---------------------------------------------------------------------------------
 .mobile-nav,
-.mobile-nav-activate,
-.mobile-nav-close {
+.mobile-nav-activate {
 	display: none;
 }
+
+.mobile-nav-activate {
+	font-size: 1.25em;
+	margin-right: 1rem;
+	line-height: 1;
+	padding: 0.65rem 0.75rem;
+	background: $brand;
+	color: #fff;
+	border-radius: 50%;
+	font-weight: bold;
+
+	&:focus,
+	&:visited {
+		color: #fff;
+	}
+
+	@media (max-width: 900px) {
+		display: block;
+	}
+}
+
+
+

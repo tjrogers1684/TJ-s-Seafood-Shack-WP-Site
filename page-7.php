@@ -66,21 +66,15 @@
 					?>
 
 						<?php if ( $menu_item_availability == 'available' ) { ?>
-							<div class="menu-item">
-								<div class="menu-item-photo">
-									<img src="<?php echo $menu_item_image['url']; ?>" alt="<?php echo $menu_item_image['alt'] ?>" />
-								</div>
-
-								<div class="menu-item-content">
-									<p class="menu-item-name"><?php echo $menu_item_name; ?></p>
-									<p class="menu-item-price">
-										<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
-										<?php if( $menu_item_price_tier_2 ): ?>
-											<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
-										<?php endif; ?>
-									</p>
-								</div>
-							</div>
+							<p class="menu-item">
+								<span class="menu-item-name"><?php echo $menu_item_name; ?></span>
+								<span class="menu-item-leading-dots">&nbsp;</span>
+								<span class="menu-item-price">
+									<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
+									<?php if( $menu_item_price_tier_2 ): ?>
+										<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
+									<?php endif; ?>
+							</p>
 						<?php } ?>
 
 						<?php endwhile; ?>

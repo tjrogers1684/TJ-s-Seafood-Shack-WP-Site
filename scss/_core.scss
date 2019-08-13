@@ -70,6 +70,10 @@ hr {
 			display: none;
 			text-transform: capitalize;
 
+			@media (max-width: 820px) {
+				font-size: 1rem;
+			}
+
 			&.today {
 				display: block;
 			}
@@ -112,9 +116,8 @@ hr {
 			transition: 0.3s;
 		}
 
-		@media (max-width: 1240px) {
-			//padding-left: 140px;
-			//justify-content: flex-end;
+		@media (max-width: 1130px) {
+			padding-left: 270px;
 		}
 
 		.header-banner-social-menu {
@@ -172,12 +175,19 @@ hr {
 			font-size: 0.823em;
 			line-height: 1.25;
 
-			div {
-				//padding-left: 3rem;
+			@media (max-width: 1130px) {
+				display: block;
+				margin-right: auto;
 			}
 
 			.header-contact-phone-hours {
 				padding-left: 3rem;
+
+				@media (max-width: 1130px) {
+					padding: 0;
+					margin-top: 0.75rem;
+				}
+
 				span {
 					display: block;
 
@@ -287,7 +297,7 @@ hr {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: stretch;
 }
 
 .content-area {

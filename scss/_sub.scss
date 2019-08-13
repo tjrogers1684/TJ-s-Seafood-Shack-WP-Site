@@ -179,53 +179,71 @@
 // ---------------------------------------------------------------------------------
 /* --------------------------------------------- MENU -- */
 .food-truck-menu-container {
+	background: #fff;
+	@include drop_shadow();
+	padding: 2rem 1.5rem 2rem;
+	min-height: 70%;
+
 	.menu-item {
-		width: calc( 100% - 0.5rem );
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-start;
-		background: #fff;
-		@include drop_shadow();
-		padding: 1rem;
-		margin-bottom: 0.75rem;
+		position: relative;
 
-		@media (max-width: 800px) {
-			width: 100%;
+		& + .menu-item {
+			margin-top: 0.75rem;
 		}
 
-		div {
-			width: calc( 60% - 0.5rem );
+		span {
+			display: block;
+
+			&.menu-item-leading-dots {
+				position: absolute;
+				width: 100%;
+				vertical-align:bottom;
+				background-image:radial-gradient($brand-alt 2px, white 1px);
+				background-size: 8px 8px;
+				background-repeat:repeat-x;
+				background-position: left bottom;
+
+				@media (max-width: 540px) {
+					display: none;
+				}
+			}
+		}
+
+		.menu-item-name,
+		.menu-item-price {
+			position: relative;
+			z-index: 2;
+			background: #fff;
+			padding: 0.25rem;
 
 			@media (max-width: 540px) {
 				width: 100% !important;
+				max-width: none !important;
 			}
+		}
 
-			&.menu-item-photo {
-				width: calc( 40% - 0.5rem );
+		.menu-item-name {
+			position: relative;
+			font-weight: bold;
+			line-height: 1.25;
+			font-size: 1.25em;
+			z-index: 2;
+			max-width: 300px;
+		}
 
-				@media (max-width: 540px) {
-					margin-bottom: 1rem;
-				}
-			}
+		.menu-item-price {
+			position: relative;
+			font-style: italic;
+			z-index: 2;
+			max-width: 130px;
 
-			&.menu-item-content {
-				.menu-item-name {
-					font-weight: bold;
-					line-height: 1.25;
-					font-size: 1.5em;
-				}
-
-				.menu-item-price {
-					font-style: italic;
-					color: #888;
-					font-size: 1.15em;
-
-					span {
-						display: block;
-					}
-				}
+			span {
+				display: block;
 			}
 		}
 	}
@@ -238,23 +256,20 @@
 		.event-item {
 			padding: 0 1rem 1rem 1rem;
 
-			&:nth-child(even) {
-				background: #fff;
-				//@include drop_shadow();
-			}
-
 			& + .event-item {
 				padding: 1rem;
+
+				border-top: 1px solid #ddd;
 			}
 
 			.event-item-name-date-icon-container {
-				margin-bottom: 1rem;
+				margin-bottom: 1.25rem;
 				position: relative;
 				padding-left: 2.5rem;
 				line-height: 1;
 
 				.event-item-calendar-icon-container {
-					font-size: 1.75em;
+					font-size: 1.5em;
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -273,7 +288,7 @@
 
 					& + .event-item-date {
 						margin-top: 0.25rem;
-						font-size: 1.125em;
+						font-size: 1.05em;
 						font-style: italic;
 						color: #888;
 					}
@@ -282,6 +297,7 @@
 
 			.event-item-location-container {
 				padding-left: 2.5rem;
+				font-size: 0.9em;
 
 				i {
 					margin-right: 0.25rem;
