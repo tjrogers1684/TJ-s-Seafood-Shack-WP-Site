@@ -63,24 +63,6 @@
 							$menu_item_availability = get_sub_field('food_truck_menu_item_currently_available');
 							$menu_item_availability = $menu_item_availability['0'];
 							$menu_item_categories = get_sub_field('food_truck_menu_item_category');
-
-							if($menu_item_categories){
-							    foreach ($menu_item_categories as $menu_item_category){
-								    if( $menu_item_category == 'fish' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
-								    if( $menu_item_category == 'tacos' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
-								    if( $menu_item_category == 'shrimp' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/shrimp.svg" />'; }
-								    if( $menu_item_category == 'seafood' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
-								    if( $menu_item_category == 'chicken' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/chicken.svg" />'; }
-								    if( $menu_item_category == 'sanwichs' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/sanwich.svg" />'; }
-								    if( $menu_item_category == 'kids' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/family.svg" />'; }
-								    if( $menu_item_category == 'dessert' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
-								    if( $menu_item_category == 'burgers' ) { $menu_item_category == '<img src="/wp-content/themes/tjs/images/hamburger.svg" />'; }
-
-								    //echo $menu_item_category . ',<br/>';
-							    }
-							}
-
-
 					?>
 
 						<?php if ( $menu_item_availability == 'available' ) { ?>
@@ -95,9 +77,9 @@
 											    if( $menu_item_category == 'shrimp' ) { echo '<img src="/wp-content/themes/tjs/images/shrimp.svg" />'; }
 											    if( $menu_item_category == 'seafood' ) { echo '<img src="/wp-content/themes/tjs/images/fish.svg" />'; }
 											    if( $menu_item_category == 'chicken' ) { echo '<img src="/wp-content/themes/tjs/images/chicken.svg" />'; }
-											    if( $menu_item_category == 'sanwichs' ) { echo '<img src="/wp-content/themes/tjs/images/sanwich.svg" />'; }
-											    if( $menu_item_category == 'kids' ) { echo '<img src="/wp-content/themes/tjs/images/taco.svg" />'; }
-											    if( $menu_item_category == 'dessert' ) { echo '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
+											    if( $menu_item_category == 'sandwiches' ) { echo '<img src="/wp-content/themes/tjs/images/sandwich.svg" />'; }
+											    if( $menu_item_category == 'kids' ) { echo '<img src="/wp-content/themes/tjs/images/family.svg" />'; }
+											    if( $menu_item_category == 'desserts' ) { echo '<img src="/wp-content/themes/tjs/images/pie.svg" />'; }
 											    if( $menu_item_category == 'burgers' ) { echo '<img src="/wp-content/themes/tjs/images/hamburger.svg" />'; }
 									     	}
 									     ?>

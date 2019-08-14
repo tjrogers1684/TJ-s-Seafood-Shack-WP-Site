@@ -48,7 +48,7 @@
 	}
 }
 
-/* --------------------------------------------- MENU PAGE FEATURE -- */
+/* --------------------------------------------- MENU PAGE -- */
 .menu-items-categories-container {
 	column-count: 2;
 	column-gap: 1.5rem;
@@ -60,7 +60,6 @@
 
 	.menu-items-category {
 		break-inside: avoid;
-		background: lighten( $brand,30 );
 		background: none;
 		padding: 2rem;
 		margin-bottom: 1.5rem;
@@ -84,9 +83,8 @@
 
 		h2 {
 			text-align: center;
-			padding-bottom: 0.5rem;
 			width: 75%;
-			margin: 0 auto 1.5rem;
+			margin: 0 auto 1rem;
 		}
 
 		.menu-items-listing {
@@ -103,22 +101,28 @@
 				-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
   		        page-break-inside: avoid; /* Firefox */
                 break-inside: avoid; /* IE 10+ */
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
 				position: relative;
+				padding-top: 1.25rem;
 
 				&.featured-item {
 					border: 3px solid $brand;
 					padding: 1.5rem 1rem;
 
 					.featured-item-image {
+						margin-top: 0;
 						line-height: 0;
+
+						& + h3 {
+							margin-top: 1rem;
+						}
 					}
 				}
 
 				.new-item-banner {
 					position: absolute;
-					top: -1.25rem;
-					left: -0.75rem;
+					top: 0;
+					left: -0.5rem;
 					font-size: 0.75em;
 					background: $brand;
 					border-radius: 5px;
@@ -132,7 +136,7 @@
 					font-size: 1.125em;
 					font-weight: bold;
 					color: $maintext;
-					margin-bottom: 0.5rem;
+					margin: 0 0 0.5rem;
 
 					& + p {
 						margin-top: 0.25rem;
@@ -191,15 +195,15 @@
 
 		.menu-item-categories {
 			line-height: 0;
-			margin-bottom: -0.25rem;
+			//margin-bottom: -0.25rem;
 			position: relative;
 			z-index: 5;
 
 			img {
-				max-width: 30px;
+				max-width: 28px;
 
 				& + img {
-					margin-left: 0.5rem;
+					margin-left: 0.75rem;
 				}
 			}
 		}
@@ -219,7 +223,7 @@
 					position: absolute;
 					width: 100%;
 					vertical-align:bottom;
-					background-image:radial-gradient($brand-alt 2px, white 1px);
+					background-image:radial-gradient($brand-alt 1px, white 0px);
 					background-size: 8px 8px;
 					background-repeat:repeat-x;
 					background-position: left bottom;
