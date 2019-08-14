@@ -19,7 +19,7 @@
 				<img class="floating-image line-icon-shells-large" src="/wp-content/themes/tjs/images/line-icon-shells-large.png">
 			</div>
 
-			<div class="homepage-acllouts">
+			<div class="homepage-callouts">
 				<a href="#" class="hp-callout callout-order-online">
 					<span class="callout-icon"><img src="/wp-content/themes/tjs/images/icon-callout-order-online.svg"></span>
 					<span class="callout-text">

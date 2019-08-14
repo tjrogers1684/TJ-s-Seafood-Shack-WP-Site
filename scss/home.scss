@@ -17,6 +17,10 @@ h2 {
 	position: relative;
 
 	.feature-wrap {
+		@media (max-width: 730px) {
+			min-height: 40vh;
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -29,6 +33,83 @@ h2 {
 			transform: skew(0, -2deg)translateX(-50%);
 			box-shadow: 0 9px 17px rgba(0, 0, 0, 0.2);
 			z-index: 1;
+
+			@media (max-width: 730px) {
+				bottom: 0.5rem;
+				height: 0;
+				padding-top: 9rem;
+			}
+		}
+
+		.feature {
+			color: #fff;
+			width: 100%;
+			margin-right: -1rem;
+			text-align: center;
+			padding: 2rem 1.5rem;
+			font-size: 2em;
+			font-weight: 100;
+			position: relative;
+			z-index: 2;
+
+			@media (max-width: 730px) {
+				padding: 0;
+			}
+
+			.tagline {
+				transform: translateY(-2.5rem);
+				position: relative;
+
+				@media (max-width: 730px) {
+					transform: translateY(0);
+				}
+
+				@media (max-width: 460px) {
+					transform: translateY(-1rem);
+				}
+
+				span {
+					&.main-tag {
+						display: inline-block;
+						font-family: 'Satisfy', cursive;
+						font-size: 3.25em;
+						margin-right: 1rem;
+						transform: translateY(2.5rem);
+
+						@media (max-width: 730px) {
+							transform: translateY(0);
+							margin: 0 0 -1rem;
+							font-size: 1.75em;
+							padding: 0;
+						}
+
+						@media (max-width: 460px) {
+							font-size: 1.35em;
+						}
+					}
+
+					&.sub-tag {
+						@media (max-width: 970px) {
+							position: absolute;
+							display: block;
+							bottom: 0.5rem;
+							right: 0;
+							transform: translateY(100%);
+						}
+
+						@media (max-width: 730px) {
+							position: static;
+							transform: translateY(0);
+							font-size: 0.75em;
+						}
+
+						@media (max-width: 460px) {
+							font-size: 0.65em;
+							transform: translateY(0.25rem);
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -36,13 +117,15 @@ h2 {
 // ---------------------------------------------------------------------------------
 // ----- HP CALLOUTS --------------------------------------------------------------
 // ---------------------------------------------------------------------------------
-.homepage-acllouts {
+.homepage-callouts {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	align-items: stretch;
 	margin: 3rem 0 0;
+	padding: 0 1.5rem;
 
 	.hp-callout {
 		width: calc( 33% - 1rem );
@@ -59,6 +142,22 @@ h2 {
 		padding: 2rem 1rem 2rem 5.5rem;
 		border-radius: 5px;
 		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		transition: 0.3s;
+
+		@media (max-width: 760px) {
+			width: 100%;
+			max-width: 400px;
+			margin: 0;
+
+			& + .hp-callout {
+				margin-top: 1rem;
+			}
+		}
 
 		&:hover {
 			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#048658+0,06ae84+100 */
@@ -67,6 +166,7 @@ h2 {
 			background: -webkit-linear-gradient(left, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* Chrome10-25,Safari5.1-6 */
 			background: linear-gradient(to right, rgba(4,134,88,1) 0%,rgba(6,174,132,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#048658', endColorstr='#06ae84',GradientType=1 ); /* IE6-9 */
+			color: #fff;
 		}
 
 		&.callout-order-online {
@@ -122,6 +222,7 @@ h2 {
 		}
 
 		.callout-text {
+
 			span {
 				display: block;
 
@@ -139,7 +240,7 @@ h2 {
 }
 
 // ---------------------------------------------------------------------------------
-// ----- TASTE OF OVIEDO --------------------------------------------------------------
+// ----- TASTE OF OVIEDO -----------------------------------------------------------
 // ---------------------------------------------------------------------------------
 .taste-of-oviedo-section {
 	display: flex;
@@ -150,16 +251,34 @@ h2 {
 	position: relative;
 	padding: 7.05rem 1.5rem 9.41rem 27.5rem;
 
+	@media (max-width: 700px) {
+		padding: 4rem 1.5rem 9.41rem;
+		justify-content: center;
+	}
+
 	img {
 		position: absolute;
 		top: 1rem;
 		left: -5.5rem;
-		// width: 60%;
-		// max-width: 470px;
+		transition: 0.3s;
+		width: 100%;
+		max-width: 470px;
+
+		@media (max-width: 800px) {
+			top: 4rem;
+		}
+
+		@media (max-width: 700px) {
+			position: static;
+			margin-bottom: 2rem;
+		}
 	}
 
 	.taste-of-oviedo-text {
 		// width: 80%;
+		a.btn {
+			margin-top: 1rem;
+		}
 	}
 
 	#nf-form-3-cont {

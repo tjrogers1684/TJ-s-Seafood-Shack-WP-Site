@@ -291,30 +291,6 @@ hr {
 		box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
 		position: relative;
 		z-index: 1;
-
-		.feature {
-			color: #fff;
-			width: 100%;
-			margin-right: -1rem;
-			text-align: center;
-			padding: 2rem 1.5rem;
-			font-size: 2em;
-			font-weight: 100;
-			position: relative;
-			z-index: 2;
-
-			.tagline {
-				transform: translateY(-2.5rem);
-
-				span {
-					display: inline-block;
-					font-family: 'Satisfy', cursive;
-					font-size: 3.25em;
-					margin-right: 1rem;
-					transform: translateY(2.5rem);
-				}
-			}
-		}
 	}
 }
 
@@ -478,7 +454,7 @@ hr {
 }
 
 // ---------------------------------------------------------------------------------
-// ----- CATERING SECTION --------------------------------------------------------------
+// ----- CATERING SECTION ----------------------------------------------------------
 // ---------------------------------------------------------------------------------
 .catering-section-wrap-outer {
 	.catering-section-wrap {
@@ -507,8 +483,18 @@ hr {
 			position: relative;
 			box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
 
+			@media (max-width: 600px) {
+				flex-direction: column-reverse;
+
+				.catering-text,
+				.catering-image {
+					width: 100% !important;
+				}
+			}
+
 			.catering-text {
 				width: 58%;
+				//max-width: 615px;
 				font-size: 0.94em;
 
 				.btn {
@@ -517,12 +503,28 @@ hr {
 				}
 			}
 
-			.food-truck {
-				position: absolute;
-				top: 50%;
-				right: -1.5rem;
-				transform: translateY(-50%);
+			.catering-image {
+				width: 42%;
 				z-index: 2;
+
+				@media (max-width: 600px) {
+					margin-bottom: 1rem;
+					text-align: center;
+
+					.food-truck {
+						position: static !important;
+						transform: translate(0,0) !important;;
+						max-width: 100% !important;;
+					}
+				}
+
+				.food-truck {
+					width: 460px !important;
+					max-width: none;
+					position: absolute;
+					transform: translate(2.5rem,-50%);
+					top: 50%;
+				}
 			}
 
 			.img-hidden-container {
@@ -555,7 +557,11 @@ hr {
 	mask-repeat: no-repeat;
 
 	@media (max-width: 760px) {
-		mask-size: auto;
+		mask-size: 300%;
+	}
+
+	@media (max-width: 470px) {
+		mask-size: 450%;
 	}
 
 	.footer-wrap {

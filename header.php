@@ -108,7 +108,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
     	<div class="feature-wrap-outer">
     		<div class="feature-wrap">
 	    		<div class="feature feat-hp">
-		    		<p class="tagline"><span>Seafood Galore</span>& a whole lot more!</p>
+		    		<p class="tagline"><span class="main-tag">Seafood Galore</span><span class="sub-tag">& a whole lot more!</span></p>
 		    	</div>
 	    	</div>
 

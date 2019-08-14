@@ -20,7 +20,9 @@
 				        	<p><a href="/catering" class="btn hp-callout-catering"><i class="fas fa-truck"></i> Our Seafood Catering</a></p>
 				        </div>
 
-				        <img class="food-truck" src="/wp-content/themes/tjs/images/img-food-truck.png">
+				        <div class="catering-image">
+				        	<img class="food-truck" src="/wp-content/themes/tjs/images/img-food-truck.png">
+				        </div>
 
 				        <span class="img-hidden-container"><img class="background-oval" src="/wp-content/themes/tjs/images/bkd-food-truck-oval.png"></span>
 				    </div>

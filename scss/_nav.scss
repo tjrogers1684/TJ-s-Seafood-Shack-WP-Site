@@ -130,7 +130,6 @@
 // ---------------------------------------------------------------------------------
 // ----- MOBILE NAV ----------------------------------------------------------------
 // ---------------------------------------------------------------------------------
-.mobile-nav,
 .mobile-nav-activate {
 	display: none;
 }
@@ -139,12 +138,12 @@
 	font-size: 1.75em;
 	margin-right: 1rem;
 	line-height: 1;
-font-weight: bold;
+	font-weight: bold;
 
-	&:focus,
-	&:visited {
-		color: #fff;
-	}
+	// &:focus,
+	// &:visited {
+	// 	color: #fff;
+	// }
 
 	@media (max-width: 900px) {
 		display: block;
@@ -154,6 +153,81 @@ font-weight: bold;
 		position: absolute;
 		top: 1.5rem;
 		right: 0;
+	}
+}
+
+.mobile-nav {
+	position: absolute;
+	z-index: 101;
+	top: 1rem;
+	left: 0;
+	width: 90%;
+	padding: 0 0 1rem 0;
+	background: $brand;
+	@include drop_shadow();
+	transform: translateX(-105%);
+	transition: 0.5s;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	.mobile-nav-close {
+		display: block;
+		text-align: right;
+		color: #fff;
+		padding: 0.5rem 1rem;
+		font-size: 2rem;
+		line-height: 1;
+	}
+
+	ul,
+	ul li {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	ul {
+		padding-top: 0.5rem;
+	}
+
+	ul li {
+		a {
+			display: block;
+			padding: 0.25rem 0.75rem;
+			font-weight: bold;
+			color: #fff;
+			font-size: 1.5rem;
+
+			&:hover {
+				background: $brand-dk;
+			}
+		}
+
+		ul {
+			li {
+				a {
+					font-size: 0.8em;
+					padding: 0rem 0.75rem;
+					text-transform: initial;
+				}
+			}
+		}
+	}
+
+	&.current_page_item > a {
+		color: $brand-alt;
+
+		&:after {
+			content: "You are here.";
+			background: $brand-alt;
+			color: $maintext;
+			font-size: 0.9em;
+			padding: 0.1em 0.1em 0 0.1em;
+			margin-left: 0.5em;
+			border-radius: 3px;
+		}
 	}
 }
 
