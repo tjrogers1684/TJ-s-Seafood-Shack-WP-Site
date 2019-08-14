@@ -3,9 +3,8 @@
 // ----- TOP NAV -------------------------------------------------------------------
 // ---------------------------------------------------------------------------------
 .top-nav {
-	//width: 40%;
 	position: relative;
-	z-index: 5;
+	z-index: 6;
 
 	@media (max-width: 900px) {
 		display: none;
@@ -137,14 +136,10 @@
 }
 
 .mobile-nav-activate {
-	font-size: 1.25em;
+	font-size: 1.75em;
 	margin-right: 1rem;
 	line-height: 1;
-	padding: 0.65rem 0.75rem;
-	background: $brand;
-	color: #fff;
-	border-radius: 50%;
-	font-weight: bold;
+font-weight: bold;
 
 	&:focus,
 	&:visited {
@@ -153,6 +148,12 @@
 
 	@media (max-width: 900px) {
 		display: block;
+	}
+
+	@media (max-width: 480px) {
+		position: absolute;
+		top: 1.5rem;
+		right: 0;
 	}
 }
 

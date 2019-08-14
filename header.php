@@ -14,8 +14,8 @@ $addl_body_classes[] = 'section-'.explode('/', $_SERVER['REQUEST_URI'])[1];
 if( !empty(explode('/', $_SERVER['REQUEST_URI'])[2]) && !strstr(explode('/', $_SERVER['REQUEST_URI'])[2], '?') ){
 	$addl_body_classes[] = 'section-'.explode('/', $_SERVER['REQUEST_URI'])[1].'-'.explode('/', $_SERVER['REQUEST_URI'])[2];
 }
-$addl_body_classes[] = 'not-front';
 
+if ( !is_front_page() ) { $addl_body_classes[] = 'not-front'; }
 if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 ?>
 
@@ -78,7 +78,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 				<a href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
 			</p>
 
-	        <a href="/" class="site-logo"><img src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"></a>
+	        <a href="/" class="site-logo"><img class="desktop-logo" src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"><img class="mobile-logo" src="/wp-content/themes/tjs/images/site-logo-mobile.png" alt="TJs Seafood Shack"></a>
 
 	        <div class="header-contact-wrap">
 	        	<div class="header-contact-address">
