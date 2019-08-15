@@ -894,6 +894,10 @@ img {
       @media (max-width: 500px) {
         .footer-wrap-outer .footer-wrap .footer-contact {
           width: 100% !important; } }
+      @media (max-width: 760px) {
+        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup {
+          max-width: 270px;
+          margin: auto; } }
       .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14_1-container,
       .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-18_1-container {
         font-weight: bold;
@@ -904,6 +908,12 @@ img {
         padding: 0.75rem;
         border-radius: 3px;
         border: none; }
+      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14-container {
+        margin-bottom: 0 !important;
+        font-weight: bold !important; }
+        @media (max-width: 760px) {
+          .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14-container {
+            text-align: center; } }
       .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup .nf-response-msg {
         margin-bottom: 2rem; }
       .footer-wrap-outer .footer-wrap .footer-contact .contact-info-hours {

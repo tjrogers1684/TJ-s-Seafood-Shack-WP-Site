@@ -733,6 +733,11 @@ hr {
 
 			.newsletter-signup {
 
+				@media (max-width: 760px) {
+					max-width: 270px;
+					margin: auto;
+				}
+
 				#nf-field-14_1-container,
 				#nf-field-18_1-container {
 					font-weight: bold;
@@ -746,6 +751,15 @@ hr {
 					padding: 0.75rem;
 					border-radius: 3px;
 					border: none;
+				}
+
+				#nf-field-14-container {
+					margin-bottom: 0 !important;
+					font-weight: bold !important;
+
+					@media (max-width: 760px) {
+						text-align: center;
+					}
 				}
 
 				.nf-response-msg {
