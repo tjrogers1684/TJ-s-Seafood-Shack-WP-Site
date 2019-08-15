@@ -27,9 +27,9 @@ jQuery(function($) {
 $(document).on('nfFormReady', function() {
 	$('.footer-wrap .nf-form-cont .submit-container input[type=button]').hide();
 
-	$('.footer-wrap .nf-form-cont input:not([type=button])').keypress(function(e) {
+	$('.footer-wrap #nf-form-3-cont input:not([type=button])').keypress(function(e) {
 		if (e.keyCode === 13) {
-			$('.footer-wrap .nf-form-cont .submit-container input[type=button]').click();
+			$('.footer-wrap #nf-form-3-cont .submit-container input[type=button]').click();
 		}
 	});
 });

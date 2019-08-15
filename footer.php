@@ -1,7 +1,3 @@
-<?php 
-	wp_footer(); 
-?>
-
 </div><?php #end .page-wrap ?>
 
 <div class="prefooter-wrap">
