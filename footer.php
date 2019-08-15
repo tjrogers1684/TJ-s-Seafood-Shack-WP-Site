@@ -1,4 +1,6 @@
-<?php wp_footer(); ?>
+<?php 
+	wp_footer(); 
+?>
 
 </div><?php #end .page-wrap ?>
 
@@ -51,7 +53,7 @@
 		<div class="footer-section footer-contact">
 
 			<div class="newsletter-signup">
-				<?php echo do_shortcode('[ninja_form id=3]'); ?>
+				<?php Ninja_Forms()->display( 3 ); ?>
 			</div>
 
 			<div class="contact-info-hours">
@@ -86,6 +88,8 @@
 		</div>
 	</div>
 </div>
+
+<?php wp_footer(); ?>
 
 </body>
 </html>

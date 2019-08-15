@@ -29,7 +29,7 @@ $(document).on('nfFormReady', function() {
 
 	$('.footer-wrap .nf-form-cont input:not([type=button])').keypress(function(e) {
 		if (e.keyCode === 13) {
-			$('.nf-form-cont .submit-container input[type=button]').click();
+			$('.footer-wrap .nf-form-cont .submit-container input[type=button]').click();
 		}
 	});
 });

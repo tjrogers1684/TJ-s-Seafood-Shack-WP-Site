@@ -18,6 +18,8 @@ get_header();
 
 			<?php endwhile; ?><!-- PAGE MAIN QUERY -->
 
+			<?php //echo do_shortcode('[ninja_form id=3]'); ?>
+
 			<!-- ARTICLES LISTING -->
 			<div class="menu-items-categories-container">
 

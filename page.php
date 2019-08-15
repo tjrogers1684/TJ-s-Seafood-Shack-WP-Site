@@ -16,6 +16,8 @@ get_header(); ?>
 
 				<h1 class="page-title"><?php the_title(); ?></h1>
 
+				<?php // echo do_shortcode('[ninja_form id=3]'); ?>
+
 				<?php the_content(); ?>
 			<?php endwhile; ?><!-- PAGE MAIN QUERY -->
 		</div>
