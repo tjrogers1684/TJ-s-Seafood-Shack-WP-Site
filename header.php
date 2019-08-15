@@ -66,7 +66,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 				<?php endwhile; else : ?>
 				<?php endif; ?>
 
-				<a href="#specials" class="see-more-specials">See Weekly Specials</a>
+				<a href="/#specials" class="see-more-specials">See Weekly Specials</a>
 
 		</div><!-- END SPECIALS BANNER WRAP -->
 	</div><!-- END SPECIALS BANNERL WRAP OUTER -->

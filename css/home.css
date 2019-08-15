@@ -9,7 +9,7 @@ h2 {
   position: relative; }
   @media (max-width: 730px) {
     .feature-wrap-outer .feature-wrap {
-      min-height: 40vh; } }
+      min-height: 30vh; } }
   .feature-wrap-outer .feature-wrap:after {
     content: '';
     position: absolute;

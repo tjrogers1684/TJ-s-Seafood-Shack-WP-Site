@@ -372,10 +372,6 @@ img {
     -webkit-box-align: center;
             align-items: center;
     position: relative; }
-    @media (max-width: 460px) {
-      .specials-banner-wrap-outer .specials-banner-wrap {
-        -webkit-box-pack: start;
-                justify-content: flex-start; } }
     .specials-banner-wrap-outer .specials-banner-wrap .special-today {
       font-size: 1.5rem;
       font-weight: 100;
@@ -399,6 +395,9 @@ img {
       font-weight: bold;
       font-style: italic;
       font-size: 0.76rem; }
+      @media (max-width: 540px) {
+        .specials-banner-wrap-outer .specials-banner-wrap a {
+          display: none; } }
 
 .header-wrap-outer {
   position: relative;
@@ -647,6 +646,21 @@ img {
         padding: 0 1.25rem;
         font-size: 0.88em;
         position: relative; }
+        @media (max-width: 760px) {
+          .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day {
+            width: 33.33%; }
+            .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day:nth-child(4), .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day:nth-child(5), .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day:nth-child(6) {
+              margin-top: 3rem; } }
+        @media (max-width: 540px) {
+          .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day {
+            width: 50%; }
+            .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day:nth-child(3) {
+              margin-top: 3rem; } }
+        @media (max-width: 400px) {
+          .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day {
+            width: 100%; }
+            .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day:nth-child(2) {
+              margin-top: 3rem; } }
         .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today {
           color: #fff; }
           .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today h3 {
@@ -671,6 +685,15 @@ img {
             -webkit-transform: skew(0, -5deg);
                     transform: skew(0, -5deg);
             box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2); }
+            @media (max-width: 800px) {
+              .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today:after {
+                height: 140%; } }
+            @media (max-width: 540px) {
+              .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today:after {
+                height: 160%; } }
+            @media (max-width: 430px) {
+              .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today:after {
+                height: 150%; } }
           .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today h3,
           .weekly-specials-container .weekly-specials .weekly-specials-days .weekly-specials-day.today p {
             position: relative;

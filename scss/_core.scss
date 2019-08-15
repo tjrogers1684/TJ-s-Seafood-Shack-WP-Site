@@ -63,10 +63,6 @@ hr {
 		align-items: center;
 		position: relative;
 
-		@media (max-width: 460px) {
-			justify-content: flex-start;
-		}
-
 		.special-today {
 			font-size: 1.5rem;
 			font-weight: 100;
@@ -94,6 +90,10 @@ hr {
 			font-weight: bold;
 			font-style: italic;
 			font-size: 0.76rem;
+
+			@media (max-width: 540px) {
+				display: none;
+			}
 		}
 	}
 }
@@ -403,6 +403,32 @@ hr {
 				font-size: 0.88em;
 				position: relative;
 
+				@media (max-width: 760px) {
+					width: 33.33%;
+
+					&:nth-child(4),
+					&:nth-child(5),
+					&:nth-child(6) {
+						margin-top: 3rem;
+					}
+				}
+
+				@media (max-width: 540px) {
+					width: 50%;
+
+					&:nth-child(3) {
+						margin-top: 3rem;
+					}
+				}
+
+				@media (max-width: 400px) {
+					width: 100%;
+
+					&:nth-child(2) {
+						margin-top: 3rem;
+					}
+				}
+
 				&.today {
 					color: #fff;
 
@@ -434,6 +460,18 @@ hr {
 						background: $brand;
 						transform: skew(0, -5deg);
 						box-shadow: 0 5px 10px rgba(0, 88, 120, 0.2);
+
+						@media (max-width: 800px) {
+							height: 140%;
+						}
+
+						@media (max-width: 540px) {
+							height: 160%;
+						}
+
+						@media (max-width: 430px) {
+							height: 150%;
+						}
 					}
 
 					h3,
