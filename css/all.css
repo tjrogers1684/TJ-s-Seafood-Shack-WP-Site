@@ -904,6 +904,8 @@ img {
         padding: 0.75rem;
         border-radius: 3px;
         border: none; }
+      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup .nf-response-msg {
+        margin-bottom: 2rem; }
       .footer-wrap-outer .footer-wrap .footer-contact .contact-info-hours {
         display: -webkit-box;
         display: flex;
