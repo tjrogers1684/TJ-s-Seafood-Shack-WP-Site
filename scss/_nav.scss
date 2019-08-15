@@ -140,11 +140,6 @@
 	line-height: 1;
 	font-weight: bold;
 
-	// &:focus,
-	// &:visited {
-	// 	color: #fff;
-	// }
-
 	@media (max-width: 900px) {
 		display: block;
 	}
@@ -202,6 +197,12 @@
 
 			&:hover {
 				background: $brand-dk;
+			}
+
+			&:hover,
+			&:focus,
+			&:visited {
+				color: #fff;
 			}
 		}
 

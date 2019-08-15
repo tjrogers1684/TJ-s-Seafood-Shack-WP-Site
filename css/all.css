@@ -314,6 +314,8 @@ button {
     font-size: 1.5rem; }
     .mobile-nav ul li a:hover {
       background: #05b07e; }
+    .mobile-nav ul li a:hover, .mobile-nav ul li a:focus, .mobile-nav ul li a:visited {
+      color: #fff; }
   .mobile-nav ul li ul li a {
     font-size: 0.8em;
     padding: 0rem 0.75rem;
