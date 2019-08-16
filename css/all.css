@@ -1028,7 +1028,9 @@ img {
     .menu-items-categories-container .menu-items-category h2 {
       text-align: center;
       width: 75%;
-      margin: 0 auto 1rem; }
+      margin: 0 auto 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px dotted #444; }
     .menu-items-categories-container .menu-items-category .menu-items-listing {
       -webkit-column-count: 2;
          -moz-column-count: 2;
@@ -1084,6 +1086,11 @@ img {
           .menu-items-categories-container .menu-items-category .menu-items-listing .menu-item h3 + p {
             margin-top: 0.25rem;
             font-size: 0.8em; }
+          .menu-items-categories-container .menu-items-category .menu-items-listing .menu-item h3 .spicy-item-icon {
+            color: #f33010;
+            margin-left: 0.25rem;
+            -webkit-transform: translateY(-0.25rem);
+                    transform: translateY(-0.25rem); }
 
 .page-id-14 .content-wrap .nf-form-cont {
   background: #fff;

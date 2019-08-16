@@ -85,6 +85,8 @@
 			text-align: center;
 			width: 75%;
 			margin: 0 auto 1rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px dotted #444;
 		}
 
 		.menu-items-listing {
@@ -141,6 +143,12 @@
 					& + p {
 						margin-top: 0.25rem;
 						font-size: 0.8em;
+					}
+
+					.spicy-item-icon {
+						color: #f33010;
+						margin-left: 0.25rem;
+						transform: translateY(-0.25rem);
 					}
 				}
 			}

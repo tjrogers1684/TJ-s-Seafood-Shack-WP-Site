@@ -68,6 +68,7 @@ get_header();
 								<?php
 									$post_meta = get_post_meta($post->ID);
 									$new_item = get_field('item_info_group_menu_item_type_new_menu_item');
+									$spicy_item = get_field('item_info_group_menu_item_type_spicy_menu_item');
 									$featured_item = get_field('item_info_group_menu_item_type_featured_menu_item');
 									$featured_img = get_the_post_thumbnail_url(get_the_ID(),'full');
 
@@ -76,14 +77,14 @@ get_header();
 
 								<div class="menu-item<?php if( $new_item == 1 ) { echo ' new-item'; } ?><?php if( $featured_item == 1 ) { echo ' featured-item'; } ?>">
 									<?php if( $new_item == 1 ) { ?>
-										<p class="new-item-banner">New</p>
+										<p class="new-item-banner">Must Try!</p>
 									<?php } ?>
 
 									<?php if( $featured_item == 1 ) { ?>
 										<p class="featured-item-image"><img src="<?php echo $featured_img; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"></p>
 									<?php } ?>
 
-									<h3 class="menu-item-title"><?php the_title(); ?></h3>
+									<h3 class="menu-item-title"><?php the_title(); ?><?php if( $spicy_item == 1 ) { ?><i class="fas fa-pepper-hot spicy-item-icon"></i><?php } ?></h3>
 
 									<?php the_excerpt(); ?>
 								</div>
