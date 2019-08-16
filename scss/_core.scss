@@ -146,7 +146,7 @@ hr {
 				font-size: 1.25em;
 
 				& + a {
-					padding-top: 0.5rem;
+					padding-top: 0.25rem;
 				}
 			}
 		}
@@ -508,6 +508,24 @@ hr {
 			transform: translateY(-35%);
 		}
 
+		.hp-event-item-link {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(-1rem,-50%);
+			font-size: 0.85em;
+
+			span {
+				font-size: 1rem;
+				display: inline-block;
+				//border-bottom: 2px solid #fff;
+				//text-decoration: underline;
+				font-weight: bold;
+				//color: $brand-blue;
+				text-transform: uppercase;
+			}
+		}
+
 		.catering-section {
 			max-width: 1120px;
 			margin: 0 auto;
@@ -681,7 +699,7 @@ hr {
 			.site-logo-footer {
 				display: block;
 				line-height: 0;
-				margin-bottom: -1rem;
+				margin-bottom: -1.5rem;
 
 				img {
 					max-width: 282px;
@@ -711,7 +729,7 @@ hr {
 
 				a {
 					display: inline-block;
-					padding: 0 0.25rem;
+					padding: 0 0.125rem;
 					font-size: 1.5rem;
 				}
 			}

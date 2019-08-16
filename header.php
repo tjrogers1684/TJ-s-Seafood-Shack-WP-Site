@@ -76,6 +76,7 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	        <p class="header-banner-social-menu">
 				<a href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
 				<a href="https://www.instagram.com/tjsseafoodshack/"><i class="fab fa-instagram"></i></a>
+				<a class="social-link twitter" href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
 			</p>
 
 	        <a href="/" class="site-logo"><img class="desktop-logo" src="/wp-content/themes/tjs/images/site-logo.png" alt="TJs Seafood Shack"><img class="mobile-logo" src="/wp-content/themes/tjs/images/site-logo-mobile.png" alt="TJs Seafood Shack"></a>
