@@ -1264,7 +1264,53 @@ img {
       margin-right: 0.25rem;
       color: #f5a81d; }
 
-.page-id-9 .kt-row-column-wrap {
-  padding: 0; }
+.page-id-9 {
+  /* --------------------------------------------- REVIEW SECTION -- */ }
+  .page-id-9 .kt-row-column-wrap {
+    padding: 0; }
+  .page-id-9 .review-platforms-conatiner {
+    background: #e5e6e1;
+    padding: 3rem 2rem;
+    text-align: center; }
+    .page-id-9 .review-platforms-conatiner h2 {
+      font-size: 2.125rem;
+      text-transform: capitalize; }
+      .page-id-9 .review-platforms-conatiner h2 span {
+        text-transform: uppercase;
+        display: block;
+        font-weight: 300;
+        font-size: 1rem; }
+    .page-id-9 .review-platforms-conatiner .review-platforms {
+      max-width: 900px;
+      margin: auto;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center; }
+      @media (max-width: 610px) {
+        .page-id-9 .review-platforms-conatiner .review-platforms {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+                  flex-direction: column;
+          padding-top: 0; } }
+      .page-id-9 .review-platforms-conatiner .review-platforms a {
+        padding: 0 2rem;
+        display: block;
+        width: 20%;
+        -webkit-filter: invert(66%) sepia(97%) saturate(2085%) hue-rotate(114deg) brightness(101%) contrast(94%);
+                filter: invert(66%) sepia(97%) saturate(2085%) hue-rotate(114deg) brightness(101%) contrast(94%); }
+        @media (max-width: 610px) {
+          .page-id-9 .review-platforms-conatiner .review-platforms a {
+            margin: 1.5em 0;
+            padding: 0; } }
+        .page-id-9 .review-platforms-conatiner .review-platforms a:hover {
+          -webkit-filter: invert(46%) sepia(77%) saturate(3114%) hue-rotate(135deg) brightness(98%) contrast(96%);
+                  filter: invert(46%) sepia(77%) saturate(3114%) hue-rotate(135deg) brightness(98%) contrast(96%); }
 
 /*# sourceMappingURL=all.css.map */

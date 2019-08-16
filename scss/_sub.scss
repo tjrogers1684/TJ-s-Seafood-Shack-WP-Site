@@ -386,11 +386,62 @@
 
 
 // ---------------------------------------------------------------------------------
-// ----- CONTACT PAGE --------------------------------------------------------------
+// ----- LOCATIONS PAGE ------------------------------------------------------------
 // ---------------------------------------------------------------------------------
 .page-id-9 {
 	.kt-row-column-wrap {
 		padding: 0;
+	}
+
+	/* --------------------------------------------- REVIEW SECTION -- */
+	.review-platforms-conatiner {
+		background: #e5e6e1;
+		padding: 3rem 2rem;
+		text-align: center;
+
+		h2 {
+			font-size: 2.125rem;
+			text-transform: capitalize;
+
+			span {
+				text-transform: uppercase;
+				display: block;
+				font-weight: 300;
+				font-size: 1rem;
+			}
+		}
+
+		.review-platforms {
+			max-width: 900px;
+			margin: auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			@media (max-width: 610px) {
+				flex-direction: column;
+				padding-top: 0;
+			}
+
+			a {
+				padding: 0 2rem;
+				display: block;
+				width: 20%;
+				filter: invert(66%) sepia(97%) saturate(2085%) hue-rotate(114deg) brightness(101%) contrast(94%);
+
+				@media (max-width: 610px) {
+					margin: 1.5em 0;
+					padding: 0;
+					//width: 35%;
+				}
+
+				&:hover {
+					filter: invert(46%) sepia(77%) saturate(3114%) hue-rotate(135deg) brightness(98%) contrast(96%);
+				}
+			}
+		}
 	}
 }
 
