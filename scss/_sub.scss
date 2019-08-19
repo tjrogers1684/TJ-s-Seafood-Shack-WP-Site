@@ -391,6 +391,9 @@
 .page-id-9 {
 	.kt-row-column-wrap {
 		padding: 0;
+		@include drop_shadow();
+		background: #fff;
+		padding: 2rem 1.5rem 2rem;
 	}
 
 	/* --------------------------------------------- REVIEW SECTION -- */
@@ -440,6 +443,37 @@
 				&:hover {
 					filter: invert(46%) sepia(77%) saturate(3114%) hue-rotate(135deg) brightness(98%) contrast(96%);
 				}
+			}
+		}
+	}
+
+	/* --------------------------------------------- MAP -- */
+	.location-aadress {
+		font-size: 1.25em;
+	}
+
+	.location-phone-number {
+		font-weight: bold;
+		font-size: 1.15em;
+
+		& + .location-fax-number {
+			margin-top: 0.25rem;
+			font-size: 1.15em;
+		}
+	}
+
+	/* --------------------------------------------- GALLERY [INSTAGRAM] -- */
+	.location-gallery-heading {
+		margin-top: 3rem;
+	}
+
+	
+	#sbi_load {
+		margin-top: 1rem;
+
+		.sbi_follow_btn {
+			a {
+				background: $brand !important;
 			}
 		}
 	}
