@@ -21,6 +21,10 @@
 <?php if( isset($_GET['pid']) ){ $posttype = get_post( $_GET['pid'] )->post_type; } ?>
 
 <div class="content-wrap">
+	<div class="floating-image-hidden-container">
+		<img class="floating-image line-icon-shells-small" src="/wp-content/themes/tjs/images/line-icon-shells-small.png">
+		<img class="floating-image line-icon-shells-large" src="/wp-content/themes/tjs/images/line-icon-shells-large.png">
+	</div>
 
 	<?php if ( have_posts() ) { ?>
 
@@ -87,13 +91,7 @@
 								<?php } ?>
 								<div class="menu-item-info">
 									<span class="menu-item-name"><?php echo $menu_item_name; ?></span>
-									<span class="menu-item-leading-dots">&nbsp;</span>
-									<span class="menu-item-price">
-										<span class="menu-item-price-tier-1"><?php echo $menu_item_price; ?></span>
-										<?php if( $menu_item_price_tier_2 ): ?>
-											<span class="menu-item-price-tier-2"><?php echo $menu_item_price_tier_2; ?></span>
-										<?php endif; ?>
-									</div>
+								</div>
 							</div>
 						<?php } ?>
 

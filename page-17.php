@@ -9,6 +9,10 @@ get_header();
 <?php if( isset($_GET['pid']) ){ $posttype = get_post( $_GET['pid'] )->post_type; } ?>
 
 <div class="content-wrap">
+	<div class="floating-image-hidden-container">
+		<img class="floating-image line-icon-shells-small" src="/wp-content/themes/tjs/images/line-icon-shells-small.png">
+		<img class="floating-image line-icon-shells-large" src="/wp-content/themes/tjs/images/line-icon-shells-large.png">
+	</div>
 
 	<?php if ( have_posts() ) { ?>
 

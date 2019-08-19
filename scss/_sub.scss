@@ -34,6 +34,27 @@
 .page-id-17 {
 	.feature-wrap {
 		min-height: 320px !important;
+
+		.subfeature.menu-page {
+			width: 100%;
+			color: #fff;
+			text-align: right;
+			font-size: 2em;
+			padding: 0 2rem 2rem 0;
+			line-height: 1;
+
+			@media (max-width: 760px) {
+				padding-bottom: 4rem;
+			}
+
+			.call-tagline {
+				display: block;
+			}
+
+			.call-ahead {
+				font-size: 1.25rem;
+			}
+		}
 	}
 
 	.content-wrap {
@@ -240,12 +261,21 @@
 .food-truck-menu-container {
 	background: #fff;
 	@include drop_shadow();
-	padding: 2rem 1.5rem 2rem;
+	padding: 1rem 1.5rem;
 	min-height: 70%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
 
 	.menu-item {
-		& + .menu-item {
-			margin-top: 1.25rem;
+		width: 50%;
+		padding: 1rem 1.5rem 1rem 0;
+
+		@media (max-width: 540px) {
+			width: 100%;
+
 		}
 
 		.menu-item-categories {
@@ -467,7 +497,6 @@
 		margin-top: 3rem;
 	}
 
-	
 	#sbi_load {
 		margin-top: 1rem;
 

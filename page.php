@@ -15,11 +15,16 @@ get_header(); ?>
 		<p class="review-platforms">
 			<a href="https://www.yelp.com/biz/tjs-seafood-shack-oviedo"><img class="footer-review-site review-yelp" src="/wp-content/themes/tjs/images/icon-yelp.svg" alt=""></a>
 			<a href="https://www.google.com/search?q=tjs+seafood+shack+orlando&rlz=1C5CHFA_enUS721US721&oq=tjs+seafood+shack+orlando&aqs=chrome..69i57j69i64l3j69i60l2.8631j1j4&sourceid=chrome&ie=UTF-8#lrd=0x88e767d097120473:0x5b2adada89dfb423,1,,,"><img class="footer-review-site review-google" src="/wp-content/themes/tjs/images/icon-google-logo-black.svg" alt=""></a>
+			<a href="https://www.tripadvisor.com/Restaurant_Review-g34521-d1913393-Reviews-TJ_s_Seafood_Shack-Oviedo_Florida.html"><img class="footer-review-site review-trip-advisor" src="/wp-content/themes/tjs/images/tripadvisor-black.svg" alt=""></a>
 		</p>
 	</div>
 <?php } ?>
 
 <div class="content-wrap">
+	<div class="floating-image-hidden-container">
+		<img class="floating-image line-icon-shells-small" src="/wp-content/themes/tjs/images/line-icon-shells-small.png">
+		<img class="floating-image line-icon-shells-large" src="/wp-content/themes/tjs/images/line-icon-shells-large.png">
+	</div>
 
 	<?php if ( have_posts() ) { ?>
 

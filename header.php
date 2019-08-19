@@ -123,10 +123,31 @@ if( !is_user_logged_in() ){ $addl_body_classes[] = 'not-logged-in'; }
 	    	</div>
     	</div>
 
-    <?php } else { ?>
+    <?php } else if ( is_page(17) ) { ?>
     	<div class="feature-wrap-outer">
     		<div class="feature-wrap">
-				<div class="subfeature feat-hp">
+				<div class="feature subfeature menu-page">
+					<?php if ( wp_is_mobile() ) { ?>
+						<a class="btn call-ahead" href="tel:407-365-3365"> Order Now</a>
+					<?php } else { ?>
+			    		<p class="feature-phone-number"><span class="call-tagline font-alt">To Order Ahead</span>Call 407-365-3365</p>
+			    	<?php } ?>
+		    	</div>
+	    	</div>
+
+	    	<div class="floating-image-container lemon">
+	    		<img class="line-icon-lemon" src="/wp-content/themes/tjs/images/line-icon-lemon.png">
+
+	    		<div class="shrimp-container">
+		    		<img class="line-icon-shrimp-1" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    		<img class="line-icon-shrimp-2" src="/wp-content/themes/tjs/images/line-icon-shrimp.png">
+		    	</div>
+	    	</div>
+    	</div>
+	<?php } else { ?>
+    	<div class="feature-wrap-outer">
+    		<div class="feature-wrap">
+				<div class="feature subfeature">
 		    		<p>&nbsp;</p>
 		    	</div>
 	    	</div>

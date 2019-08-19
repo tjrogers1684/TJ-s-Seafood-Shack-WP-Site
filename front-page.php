@@ -24,7 +24,7 @@
 					<span class="callout-icon"><img src="/wp-content/themes/tjs/images/icon-callout-order-online.svg"></span>
 					<span class="callout-text">
 						<span class="callout-text-tagline">seafood to go</span>
-						<span class="callout-text-main font-alt">Order Online</span>
+						<span class="callout-text-main font-alt">Order Ahead</span>
 					</span>
 				</a>
 

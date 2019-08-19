@@ -312,8 +312,25 @@ hr {
 	align-items: stretch;
 }
 
+/* --------------------------------------------- SHELLS POSITIONING -- */
+.floating-image-hidden-container {
+	position: absolute;
+	overflow: hidden;
+	bottom: -10px;
+	right: -8rem;
+
+	img {
+		transform: translateY(1.9rem);
+
+		&.line-icon-shells-large {
+			transform: translateY(4rem);
+		}
+	}
+}
+
 .content-area {
 	width: 100%;
+	position: relative;
 
 	&.has-sidebar {
 		width: 66%;
@@ -601,6 +618,10 @@ hr {
 // ---------------------------------------------------------------------------------
 // ----- FOOTER --------------------------------------------------------------------
 // ---------------------------------------------------------------------------------
+.not-front .footer-wrap-outer {
+	margin-top: -6px;
+}
+
 .footer-wrap-outer {
 	//background: url("/wp-content/themes/tjs/images/bkd-footer-top.png") no-repeat top center;
 	background: #e5e6e1;

@@ -47,7 +47,7 @@
 						<div class="catering-text">
 				        	<h2>TJ's Seafood Around Town!</h2>
 
-				        	<p>Oviedo's TJ's Seafood Shack isn't just a great place to eat seafood, we cater parties and events as well! We're mobile too. Follow us on Isntagram, Facebook and Twitter to find out where we'll be.</p>
+				        	<p>Oviedo's TJ's Seafood Shack isn't just a great place to eat seafood, we cater parties and events as well! We're mobile too. Follow us on Instagram, Facebook and Twitter to find out where we'll be.</p>
 
 				        	<p><a href="/food-truck" class="btn hp-callout-catering"><i class="fas fa-truck"></i> Upcoming Events & Menu</a></p>
 				        </div>

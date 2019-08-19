@@ -285,22 +285,3 @@ h2 {
 		display: none;
 	}
 }
-
-
-/* --------------------------------------------- SHELLS POSITIONING -- */
-.floating-image-hidden-container {
-	position: absolute;
-	overflow: hidden;
-	bottom: 0;
-	right: -8rem;
-
-	img {
-		transform: translateY(1.9rem);
-
-		&.line-icon-shells-large {
-			transform: translateY(4rem);
-		}
-	}
-}
-
-

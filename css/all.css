@@ -62,6 +62,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .grippie {
   display: none !important; }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 .btn, input[type="submit"],
 input[type="button"],
 button,
@@ -576,8 +581,22 @@ img {
   -webkit-box-align: stretch;
           align-items: stretch; }
 
+/* --------------------------------------------- SHELLS POSITIONING -- */
+.floating-image-hidden-container {
+  position: absolute;
+  overflow: hidden;
+  bottom: -10px;
+  right: -8rem; }
+  .floating-image-hidden-container img {
+    -webkit-transform: translateY(1.9rem);
+            transform: translateY(1.9rem); }
+    .floating-image-hidden-container img.line-icon-shells-large {
+      -webkit-transform: translateY(4rem);
+              transform: translateY(4rem); }
+
 .content-area {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .content-area.has-sidebar {
     width: 66%;
     padding-right: 1.5rem; }
@@ -788,6 +807,9 @@ img {
         -webkit-transform: translate(40%, 6rem);
                 transform: translate(40%, 6rem); }
 
+.not-front .footer-wrap-outer {
+  margin-top: -6px; }
+
 .footer-wrap-outer {
   background: #e5e6e1;
   padding: 5rem 0;
@@ -997,6 +1019,20 @@ img {
 
 .page-id-17 .feature-wrap {
   min-height: 320px !important; }
+  .page-id-17 .feature-wrap .subfeature.menu-page {
+    width: 100%;
+    color: #fff;
+    text-align: right;
+    font-size: 2em;
+    padding: 0 2rem 2rem 0;
+    line-height: 1; }
+    @media (max-width: 760px) {
+      .page-id-17 .feature-wrap .subfeature.menu-page {
+        padding-bottom: 4rem; } }
+    .page-id-17 .feature-wrap .subfeature.menu-page .call-tagline {
+      display: block; }
+    .page-id-17 .feature-wrap .subfeature.menu-page .call-ahead {
+      font-size: 1.25rem; }
 .page-id-17 .content-wrap {
   position: relative;
   max-width: 1440px;
@@ -1164,69 +1200,83 @@ img {
 .food-truck-menu-container {
   background: #fff;
   box-shadow: 0 1rem 1.25rem -12px rgba(0, 0, 0, 0.2);
-  padding: 2rem 1.5rem 2rem;
-  min-height: 70%; }
-  .food-truck-menu-container .menu-item + .menu-item {
-    margin-top: 1.25rem; }
-  .food-truck-menu-container .menu-item .menu-item-categories {
-    line-height: 0;
-    position: relative;
-    z-index: 5; }
-    .food-truck-menu-container .menu-item .menu-item-categories img {
-      max-width: 28px; }
-      .food-truck-menu-container .menu-item .menu-item-categories img + img {
-        margin-left: 0.75rem; }
-  .food-truck-menu-container .menu-item .menu-item-info {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    position: relative; }
-    .food-truck-menu-container .menu-item .menu-item-info span {
-      display: block; }
-      .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
-        position: absolute;
-        width: 100%;
-        vertical-align: bottom;
-        background-image: -webkit-radial-gradient(#f5a81d 1px, #ffffff 0px);
-        background-image: radial-gradient(#f5a81d 1px, #ffffff 0px);
-        background-size: 8px 8px;
-        background-repeat: repeat-x;
-        background-position: left bottom; }
-        @media (max-width: 540px) {
-          .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
-            display: none; } }
-    .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
-    .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
+  padding: 1rem 1.5rem;
+  min-height: 70%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+          align-items: flex-start; }
+  .food-truck-menu-container .menu-item {
+    width: 50%;
+    padding: 1rem 1.5rem 1rem 0; }
+    @media (max-width: 540px) {
+      .food-truck-menu-container .menu-item {
+        width: 100%; } }
+    .food-truck-menu-container .menu-item .menu-item-categories {
+      line-height: 0;
       position: relative;
-      z-index: 2;
-      background: #fff;
-      padding: 0.25rem; }
-      @media (max-width: 540px) {
-        .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
-        .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
-          width: 100% !important;
-          max-width: none !important; } }
-    .food-truck-menu-container .menu-item .menu-item-info .menu-item-name {
-      position: relative;
-      font-weight: bold;
-      line-height: 1.125;
-      font-size: 1.125em;
-      z-index: 2;
-      max-width: 300px; }
-    .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
-      position: relative;
-      font-style: italic;
-      z-index: 2;
-      max-width: 130px; }
-      .food-truck-menu-container .menu-item .menu-item-info .menu-item-price span {
+      z-index: 5; }
+      .food-truck-menu-container .menu-item .menu-item-categories img {
+        max-width: 28px; }
+        .food-truck-menu-container .menu-item .menu-item-categories img + img {
+          margin-left: 0.75rem; }
+    .food-truck-menu-container .menu-item .menu-item-info {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+              align-items: flex-start;
+      position: relative; }
+      .food-truck-menu-container .menu-item .menu-item-info span {
         display: block; }
+        .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
+          position: absolute;
+          width: 100%;
+          vertical-align: bottom;
+          background-image: -webkit-radial-gradient(#f5a81d 1px, #ffffff 0px);
+          background-image: radial-gradient(#f5a81d 1px, #ffffff 0px);
+          background-size: 8px 8px;
+          background-repeat: repeat-x;
+          background-position: left bottom; }
+          @media (max-width: 540px) {
+            .food-truck-menu-container .menu-item .menu-item-info span.menu-item-leading-dots {
+              display: none; } }
+      .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
+      .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        padding: 0.25rem; }
+        @media (max-width: 540px) {
+          .food-truck-menu-container .menu-item .menu-item-info .menu-item-name,
+          .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
+            width: 100% !important;
+            max-width: none !important; } }
+      .food-truck-menu-container .menu-item .menu-item-info .menu-item-name {
+        position: relative;
+        font-weight: bold;
+        line-height: 1.125;
+        font-size: 1.125em;
+        z-index: 2;
+        max-width: 300px; }
+      .food-truck-menu-container .menu-item .menu-item-info .menu-item-price {
+        position: relative;
+        font-style: italic;
+        z-index: 2;
+        max-width: 130px; }
+        .food-truck-menu-container .menu-item .menu-item-info .menu-item-price span {
+          display: block; }
 
 /* --------------------------------------------- SCHEDULE/EVENTS -- */
 .food-truck-page-events-listing-container .food-truck-page-events-listing .event-item {
