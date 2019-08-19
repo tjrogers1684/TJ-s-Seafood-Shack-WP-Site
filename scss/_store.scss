@@ -1,0 +1,117 @@
+@import 'compass/css3';
+@import 'bits';
+
+/* CSS Document */
+
+// ---------------------------------------------------------------------------------
+// ----- INDIVIDUAL PRODUCT --------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.single-product {
+	.content-area {
+		max-width: 1120px !important;
+
+		/* --------------------------------------------- GALLERY -- */
+		.images {
+			.thumbnails {
+				padding-top: 0 !important;
+
+				.yith_magnifier_gallery {
+					li {
+						padding: 0.25rem;
+
+						& + li {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+
+		/* --------------------------------------------- PRICING/OPTIONS/ADD TO CART -- */
+		h1 {
+			margin-bottom: 0;
+
+			& + .price {
+				margin: 0.5rem 0 3rem;
+			}
+		}
+
+		.price {
+			font-size: 1.75em !important;
+			font-weight: bold;
+		}
+
+		.select.ninja-forms-field,
+		select {
+			-webkit-appearance: none;
+			border-radius: 0;
+			background: none !important;
+			position: relative;
+			cursor: pointer;
+			font-size: 1em;
+		}
+
+		.list-select-wrap .nf-field-element,
+		.select-container,
+		.value {
+			padding: 0;
+			position: relative;
+
+			&:after {
+				content: "\f0d7";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				position: absolute;
+				top: 50%;
+				right: 0.5em;
+				font-size: 1.25em;
+				transform: translateY(-50%);
+				pointer-events: none;
+			}
+		}
+
+		.variations,
+		tbody,
+		tr {
+			display: block;
+		}
+
+		.variations {
+			tr {
+				display: inline-block;
+
+				& + tr {
+					margin-top: 1rem;
+				}
+
+				&:nth-child(2) {
+					.value:after {
+						top: 25%;
+					}
+				}
+			}
+		}
+
+		/* --------------------------------------------- ADD TO CART BUTTON -- */
+		.button {
+			display: block !important;
+			float: none !important;
+			padding: 0.65rem 1rem !important;
+			line-height: 1;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

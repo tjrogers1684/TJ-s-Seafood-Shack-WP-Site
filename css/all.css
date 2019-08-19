@@ -1131,7 +1131,7 @@ img {
         .menu-items-categories-container .menu-items-category .menu-items-listing .menu-item .new-item-banner {
           position: absolute;
           top: 0;
-          left: -0.5rem;
+          left: 0;
           font-size: 0.75em;
           background: #005978;
           border-radius: 5px;
@@ -1162,12 +1162,14 @@ img {
             position: relative; }
             .menu-items-categories-container .menu-items-category .menu-items-listing .menu-item .menu-item-title-price .menu-item-title .spicy-item-icon {
               color: #f33010;
-              max-width: 24px;
+              max-width: 18px;
               -webkit-transform: rotate(-6deg);
                       transform: rotate(-6deg);
               position: absolute;
               top: 0;
-              right: 0.25rem; }
+              left: 0;
+              -webkit-transform: translate(-105%, 0) rotate(-20deg);
+                      transform: translate(-105%, 0) rotate(-20deg); }
           .menu-items-categories-container .menu-items-category .menu-items-listing .menu-item .menu-item-title-price .menu-item-price {
             width: 25%;
             margin-top: 0;
@@ -1381,5 +1383,66 @@ img {
     margin-top: 1rem; }
     .page-id-9 #sbi_load .sbi_follow_btn a {
       background: #07e1a1 !important; }
+
+/* CSS Document */
+.single-product .content-area {
+  max-width: 1120px !important;
+  /* --------------------------------------------- GALLERY -- */
+  /* --------------------------------------------- PRICING/OPTIONS/ADD TO CART -- */
+  /* --------------------------------------------- ADD TO CART BUTTON -- */ }
+  .single-product .content-area .images .thumbnails {
+    padding-top: 0 !important; }
+    .single-product .content-area .images .thumbnails .yith_magnifier_gallery li {
+      padding: 0.25rem; }
+      .single-product .content-area .images .thumbnails .yith_magnifier_gallery li + li {
+        margin-top: 0; }
+  .single-product .content-area h1 {
+    margin-bottom: 0; }
+    .single-product .content-area h1 + .price {
+      margin: 0.5rem 0 3rem; }
+  .single-product .content-area .price {
+    font-size: 1.75em !important;
+    font-weight: bold; }
+  .single-product .content-area .select.ninja-forms-field,
+  .single-product .content-area select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background: none !important;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em; }
+  .single-product .content-area .list-select-wrap .nf-field-element,
+  .single-product .content-area .select-container,
+  .single-product .content-area .value {
+    padding: 0;
+    position: relative; }
+    .single-product .content-area .list-select-wrap .nf-field-element:after,
+    .single-product .content-area .select-container:after,
+    .single-product .content-area .value:after {
+      content: "\f0d7";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      right: 0.5em;
+      font-size: 1.25em;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      pointer-events: none; }
+  .single-product .content-area .variations,
+  .single-product .content-area tbody,
+  .single-product .content-area tr {
+    display: block; }
+  .single-product .content-area .variations tr {
+    display: inline-block; }
+    .single-product .content-area .variations tr + tr {
+      margin-top: 1rem; }
+    .single-product .content-area .variations tr:nth-child(2) .value:after {
+      top: 25%; }
+  .single-product .content-area .button {
+    display: block !important;
+    float: none !important;
+    padding: 0.65rem 1rem !important;
+    line-height: 1; }
 
 /*# sourceMappingURL=all.css.map */

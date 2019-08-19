@@ -165,7 +165,7 @@
 				.new-item-banner {
 					position: absolute;
 					top: 0;
-					left: -0.5rem;
+					left: 0;
 					font-size: 0.75em;
 					background: $brand-blue;
 					border-radius: 5px;
@@ -194,11 +194,12 @@
 
 						.spicy-item-icon {
 							color: #f33010;
-							max-width: 24px;
+							max-width: 18px;
 							transform: rotate(-6deg);
 							position: absolute;
 							top: 0;
-							right: 0.25rem;
+							left: 0;
+							transform: translate(-105%,0)rotate(-20deg);
 						}
 					}
 
