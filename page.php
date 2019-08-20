@@ -20,6 +20,13 @@ get_header(); ?>
 	</div>
 <?php } ?>
 
+<?php if ( is_page(295) ) { ?>
+	<div class="header-stripe-store">
+		<p class="store-cart-info"><a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-cart"></i> <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <span class="store-header-cart-total"><?php echo WC()->cart->get_cart_total(); ?></span></a>
+		</p>
+	</div>
+<?php } ?>
+
 <div class="content-wrap">
 	<div class="floating-image-hidden-container">
 		<img class="floating-image line-icon-shells-small" src="/wp-content/themes/tjs/images/line-icon-shells-small.png">
