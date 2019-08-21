@@ -1641,8 +1641,9 @@ img {
     .section-order-online .content-area .fdoe-right-sticky .widget_shopping_cart_content .woocommerce-mini-cart__total.total {
       margin-top: 2rem; }
 
-/* --------------------------------------------- HIDE SHIRTS -- */
-.cat_tbody.scrollspy#menucat_27 {
+/* --------------------------------------------- HIDE SHIRTS & SHIRTS CATEGORY -- */
+.cat_tbody.scrollspy#menucat_27,
+#heading_menucat_27 {
   display: none; }
 
 /* --------------------------------------------- MENU -- */
@@ -1658,10 +1659,15 @@ img {
     .fdoe-products .menu_titles .fdoe_title_text i {
       display: none; }
 .fdoe-products .fdoe-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05); }
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025); }
   .fdoe-products .fdoe-item:hover i {
     color: #05b07e !important; }
+.fdoe-products .fdoe-item .fdoe_thumb {
+  width: 100px !important; }
+  .fdoe-products .fdoe-item .fdoe_thumb img {
+    min-width: 40px !important;
+    width: 90% !important; }
 .fdoe-products .fdoe-item .fdoe_title {
   color: #444 !important;
   font-size: 1.1em;

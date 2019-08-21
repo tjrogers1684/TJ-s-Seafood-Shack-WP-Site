@@ -418,8 +418,9 @@
 }
 
 
-/* --------------------------------------------- HIDE SHIRTS -- */
-.cat_tbody.scrollspy#menucat_27 {
+/* --------------------------------------------- HIDE SHIRTS & SHIRTS CATEGORY -- */
+.cat_tbody.scrollspy#menucat_27,
+#heading_menucat_27 {
 	display: none;
 }
 
@@ -444,10 +445,20 @@
 
 	.fdoe-item {
 		&:hover {
-			transform: scale(1.05);
+			transform: scale(1.025);
 
 			i {
 				color: $brand-dk !important;
+			}
+		}
+
+		.fdoe_thumb {
+			width: 100px !important;
+
+			img {
+				min-width: 40px !important;
+				//max-width: 80px !important;
+				width: 90% !important;
 			}
 		}
 
