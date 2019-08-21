@@ -425,7 +425,22 @@
 
 /* --------------------------------------------- MENU -- */
 .fdoe-products {
+	.menu_titles {
+		padding: 1rem 1rem 2rem;
 
+		.fdoe_title_text {
+			font-size: 1.5rem !important;
+			font-weight: bold;
+			font-family: 'Satisfy', cursive;
+			color: $brand-blue;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px dotted $brand-alt;
+
+			i {
+				display: none;
+			}
+		}
+	}
 
 	.fdoe-item {
 		&:hover {
@@ -434,6 +449,12 @@
 			i {
 				color: $brand-dk !important;
 			}
+		}
+
+		.fdoe_title {
+			color: $maintext !important;
+			font-size: 1.1em;
+			margin-top: 0 !important;
 		}
 
 		.fdoe_price_and_add_onecol {

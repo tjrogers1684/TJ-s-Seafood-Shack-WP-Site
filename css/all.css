@@ -1646,11 +1646,26 @@ img {
   display: none; }
 
 /* --------------------------------------------- MENU -- */
+.fdoe-products .menu_titles {
+  padding: 1rem 1rem 2rem; }
+  .fdoe-products .menu_titles .fdoe_title_text {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+    color: #005978;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dotted #f5a81d; }
+    .fdoe-products .menu_titles .fdoe_title_text i {
+      display: none; }
 .fdoe-products .fdoe-item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05); }
   .fdoe-products .fdoe-item:hover i {
     color: #05b07e !important; }
+.fdoe-products .fdoe-item .fdoe_title {
+  color: #444 !important;
+  font-size: 1.1em;
+  margin-top: 0 !important; }
 .fdoe-products .fdoe-item .fdoe_price_and_add_onecol {
   padding-right: 1rem; }
   .fdoe-products .fdoe-item .fdoe_price_and_add_onecol i {
