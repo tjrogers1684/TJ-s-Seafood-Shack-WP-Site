@@ -595,7 +595,8 @@ img {
   -webkit-box-pack: justify;
           justify-content: space-between;
   -webkit-box-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  position: relative; }
 
 /* --------------------------------------------- SHELLS POSITIONING -- */
 .floating-image-hidden-container {
@@ -1570,5 +1571,97 @@ img {
     .section-cart .content-area .woocommerce-checkout-payment #stripe-card-element,
     .section-checkout .content-area .woocommerce-checkout-payment #stripe-card-element {
       padding: 0.75rem !important; }
+
+.section-order-online .content-area {
+  max-width: 1120px; }
+  .section-order-online .content-area h1 {
+    text-align: center; }
+  .section-order-online .content-area .arocol-xs-12 {
+    padding: 0; }
+    .section-order-online .content-area .arocol-xs-12 .fdoe-flex-1 {
+      margin: 0;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+              align-items: flex-start; }
+  .section-order-online .content-area #fdoe-left-left-container,
+  .section-order-online .content-area #fdoe-left-container,
+  .section-order-online .content-area #fdoe-right-container {
+    float: none; }
+  .section-order-online .content-area #fdoe-left-left-container {
+    width: 20%; }
+  .section-order-online .content-area #fdoe-left-container {
+    width: 54%; }
+  .section-order-online .content-area #fdoe-right-container {
+    width: 26%;
+    padding: 0 1rem; }
+  .section-order-online .content-area .fdoe-less-gut {
+    padding: 0;
+    margin: 0 !important; }
+    .section-order-online .content-area .fdoe-less-gut .fdoe-sticky {
+      padding: 0;
+      width: auto !important; }
+      .section-order-online .content-area .fdoe-less-gut .fdoe-sticky.aroaffix {
+        max-width: 220px !important; }
+      .section-order-online .content-area .fdoe-less-gut .fdoe-sticky .fdoe_menuitem {
+        font-size: 1rem;
+        padding: 0; }
+        .section-order-online .content-area .fdoe-less-gut .fdoe-sticky .fdoe_menuitem.fdoe-active-link {
+          border: none;
+          background: #fff; }
+        .section-order-online .content-area .fdoe-less-gut .fdoe-sticky .fdoe_menuitem a {
+          display: block;
+          padding: 0.5rem;
+          border-bottom: 1px dotted #ccc; }
+  .section-order-online .content-area h4.Category_heading,
+  .section-order-online .content-area h4.Minicart_heading {
+    font-size: 1.75rem !important;
+    font-weight: bold;
+    margin-top: 0;
+    font-family: 'Satisfy', cursive;
+    color: #005978;
+    text-align: center; }
+  .section-order-online .content-area .fdoe-right-sticky {
+    width: auto !important;
+    padding: 1.25rem;
+    border: 2px solid #f5a81d; }
+    .section-order-online .content-area .fdoe-right-sticky.aroaffix {
+      margin-right: 1rem; }
+    .section-order-online .content-area .fdoe-right-sticky .widget_shopping_cart_content .woocommerce-mini-cart .woocommerce-mini-cart-item {
+      padding: 0.75rem 0 !important; }
+      .section-order-online .content-area .fdoe-right-sticky .widget_shopping_cart_content .woocommerce-mini-cart .woocommerce-mini-cart-item .mini-cart-quantity {
+        display: inline-block;
+        padding-left: 1.5rem; }
+    .section-order-online .content-area .fdoe-right-sticky .widget_shopping_cart_content .woocommerce-mini-cart__total.total {
+      margin-top: 2rem; }
+
+/* --------------------------------------------- HIDE SHIRTS -- */
+.cat_tbody.scrollspy#menucat_27 {
+  display: none; }
+
+/* --------------------------------------------- MENU -- */
+.fdoe-products .fdoe-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
+  .fdoe-products .fdoe-item:hover i {
+    color: #05b07e !important; }
+.fdoe-products .fdoe-item .fdoe_price_and_add_onecol {
+  padding-right: 1rem; }
+  .fdoe-products .fdoe-item .fdoe_price_and_add_onecol i {
+    color: #07e1a1; }
+
+/* --------------------------------------------- POPUP & OVERLAY -- */
+.aromodal {
+  background: rgba(0, 0, 0, 0.75); }
+  .aromodal button.close {
+    color: #07e1a1 !important;
+    background: none !important;
+    font-size: 3rem !important; }
 
 /*# sourceMappingURL=all.css.map */

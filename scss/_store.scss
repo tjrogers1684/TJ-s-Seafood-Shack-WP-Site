@@ -303,6 +303,164 @@
 
 
 
+// ---------------------------------------------------------------------------------
+// ----- ONLINE FOOD ORDERING ------------------------------------------------------
+// ---------------------------------------------------------------------------------
+.section-order-online {
+	.content-area {
+		max-width: 1120px;
+
+		h1 {
+			text-align: center;
+		}
+
+		.arocol-xs-12 {
+			padding: 0;
+
+			.fdoe-flex-1 {
+				margin: 0;
+
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+		}
+
+		#fdoe-left-left-container,
+		#fdoe-left-container,
+		#fdoe-right-container {
+			float: none;
+		}
+
+		#fdoe-left-left-container {
+			width: 20%;
+		}
+
+		#fdoe-left-container {
+			width: 54%;
+		}
+
+		#fdoe-right-container {
+			width: 26%;
+			padding: 0 1rem;
+		}
+
+		.fdoe-less-gut {
+			padding: 0;
+			margin: 0 !important;
+
+			.fdoe-sticky {
+				padding: 0;
+				width: auto !important;
+
+				&.aroaffix {
+					max-width: 220px !important;
+				}
+
+				.fdoe_menuitem  {
+					font-size: 1rem;
+					padding: 0;
+
+					&.fdoe-active-link {
+						border: none;
+						background: #fff;
+					}
+
+					a {
+						display: block;
+						padding: 0.5rem;
+						border-bottom: 1px dotted #ccc;
+					}
+				}
+			}
+		}
+
+		h4.Category_heading,
+		h4.Minicart_heading {
+			font-size: 1.75rem !important;
+			font-weight: bold;
+			margin-top: 0;
+			font-family: 'Satisfy', cursive;
+			color: $brand-blue;
+			text-align: center;
+		}
+
+		.fdoe-right-sticky {
+			width: auto !important;
+			padding: 1.25rem;
+			border: 2px solid $brand-alt;
+
+			&.aroaffix {
+				//right: 1.5rem;
+				margin-right: 1rem;
+			}
+
+			.widget_shopping_cart_content {
+				.woocommerce-mini-cart {
+					.woocommerce-mini-cart-item {
+						padding: 0.75rem 0 !important;
+
+						.mini-cart-quantity {
+							display: inline-block;
+							padding-left: 1.5rem;
+						}
+					}
+				}
+
+				.woocommerce-mini-cart__total.total {
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+}
+
+
+/* --------------------------------------------- HIDE SHIRTS -- */
+.cat_tbody.scrollspy#menucat_27 {
+	display: none;
+}
+
+/* --------------------------------------------- MENU -- */
+.fdoe-products {
+
+
+	.fdoe-item {
+		&:hover {
+			transform: scale(1.05);
+
+			i {
+				color: $brand-dk !important;
+			}
+		}
+
+		.fdoe_price_and_add_onecol {
+			padding-right: 1rem;
+
+			i {
+				color: $brand;
+			}
+		}
+	}
+}
+
+
+/* --------------------------------------------- POPUP & OVERLAY -- */
+.aromodal {
+	background: rgba(0,0,0,0.75);
+
+	button.close {
+		color: $brand !important;
+		background: none !important;
+		font-size: 3rem !important;
+	}
+}
+
+
+
+
 
 
 
