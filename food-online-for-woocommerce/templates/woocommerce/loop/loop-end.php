@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     $original_link = wc_get_checkout_url();
 
-    echo '<a href="' . esc_url( $original_link ) . '" class="button checkout from_menu" id="checkout_button_1">' . esc_html__( 'Go to Checkout', 'food-online-for-woocommerce' ) . '</a>';
+    echo '<a href="' . esc_url( $original_link ) . '" class="button checkout from_menu" id="checkout_button_1">' . esc_html__( 'Checkout', 'food-online-for-woocommerce' ) . '</a>';
 
 ?> </div>
 

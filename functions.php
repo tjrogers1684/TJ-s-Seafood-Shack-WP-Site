@@ -64,14 +64,6 @@ function woo_custom_cart_button_text() {
 	return __('Add to Order', 'woocommerce');
 }
 
-function woocommerce_button_proceed_to_checkout() {
- $checkout_url = WC()->cart->get_checkout_url(); ?>
- <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button button alt wc-forward">
- <?php esc_html_e( 'Checkout', 'woocommerce' ); ?>
- </a>
- <?php
-}
-
 
 /**
 * Give Pages higher priority that posts - path/url
