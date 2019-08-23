@@ -61,7 +61,7 @@ $menu_border_color = $fdoe_border_color == '' ? '#ddd' : $fdoe_border_color  ;
 
 if(get_option('fdoe_left_menu', 'no')== 'yes'){
                     ?>
-			<div class="hidden-xs arocol-sm-2 fdoe-less-gut" id="fdoe-left-left-container">
+			<div class="hidden-xs fdoe-sticky-element arocol-sm-2 fdoe-less-gut" id="fdoe-left-left-container">
 <?php
 $is_sticky = get_option('fdoe_sticky_bar','no') == 'yes' ? 'fdoe-sticky' : '';
 

@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<!-- The right column containing the mini cart -->
 
-				<div class=" arocol-sm-3 arocol-lg-3 fdoe-less-gut" id="fdoe-right-container" style="display:none">
+				<div class="fdoe-sticky-element arocol-sm-3 arocol-lg-3 fdoe-less-gut" id="fdoe-right-container" style="display:none">
 					<div class="fdoe-right-sticky">
 
 					<?php do_action('fdoe_loop_end_1'); ?>
