@@ -55,6 +55,23 @@ function tjs_styles_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tjs_styles_scripts' );
 
+/**
+* Change Add to Cart Button Text & CHECKOUT BUTTON TEXT
+**/
+add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
+
+function woo_custom_cart_button_text() {
+	return __('Add to Order', 'woocommerce');
+}
+
+function woocommerce_button_proceed_to_checkout() {
+ $checkout_url = WC()->cart->get_checkout_url(); ?>
+ <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button button alt wc-forward">
+ <?php esc_html_e( 'Checkout', 'woocommerce' ); ?>
+ </a>
+ <?php
+}
+
 
 /**
 * Give Pages higher priority that posts - path/url
