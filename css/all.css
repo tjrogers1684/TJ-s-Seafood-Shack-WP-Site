@@ -758,6 +758,14 @@ img {
     -webkit-transform: translate(-1rem, -50%);
             transform: translate(-1rem, -50%);
     font-size: 0.85em; }
+    @media (max-width: 540px) {
+      .catering-section-wrap-outer .catering-section-wrap .hp-event-item-link {
+        position: static;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        -webkit-box-ordinal-group: 2;
+                order: 1;
+        margin: -4rem 0 1.5rem 0; } }
     .catering-section-wrap-outer .catering-section-wrap .hp-event-item-link span {
       font-size: 1rem;
       display: inline-block;
