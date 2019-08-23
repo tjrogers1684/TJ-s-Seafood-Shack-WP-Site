@@ -1631,7 +1631,7 @@ img {
     width: auto !important;
     padding: 1.25rem;
     border: 2px solid #f5a81d; }
-    .section-order-online .content-area .fdoe-right-sticky.aroaffix {
+    .section-order-online .content-area .fdoe-right-sticky.aroaffix, .section-order-online .content-area .fdoe-right-sticky.aroaffix-bottom {
       margin-right: 1rem;
       max-width: 245px; }
     .section-order-online .content-area .fdoe-right-sticky .widget_shopping_cart_content .woocommerce-mini-cart .woocommerce-mini-cart-item {

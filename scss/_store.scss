@@ -392,7 +392,8 @@
 			padding: 1.25rem;
 			border: 2px solid $brand-alt;
 
-			&.aroaffix {
+			&.aroaffix,
+			&.aroaffix-bottom {
 				//right: 1.5rem;
 				margin-right: 1rem;
 				max-width: 245px;
