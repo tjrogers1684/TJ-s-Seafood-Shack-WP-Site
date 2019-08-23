@@ -1620,6 +1620,20 @@ img {
   .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_email_field {
     float: none;
     width: 50%; }
+    @media (max-width: 500px) {
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_first_name_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_last_name_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_company_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_address_1_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_address_2_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_phone_field,
+      .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_email_field {
+        width: 100% !important; } }
+  @media (max-width: 500px) {
+    .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_city_field,
+    .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_state_field,
+    .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_postcode_field {
+      width: 100% !important; } }
   .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_country_field {
     width: 100%; }
   .section-checkout .checkout .col2-set .col-1 .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper #billing_address_2_field {
