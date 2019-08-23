@@ -20,7 +20,7 @@
 			</div>
 
 			<div class="homepage-callouts">
-				<a href="/menu/" class="hp-callout callout-order-online">
+				<a href="/order-online/" class="hp-callout callout-order-online">
 					<span class="callout-icon"><img src="/wp-content/themes/tjs/images/icon-callout-order-online.svg"></span>
 					<span class="callout-text">
 						<span class="callout-text-tagline">seafood to go</span>
