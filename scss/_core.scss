@@ -779,38 +779,41 @@ hr {
 			}
 
 			.newsletter-signup {
+				#mc_embed_signup {
+					background: none;
+					font-size: inherit;
 
-				@media (max-width: 760px) {
-					max-width: 270px;
-					margin: auto;
-				}
+					form {
+						@media (max-width: 760px) {
+							max-width: 270px;
+							margin: auto;
+						}
 
-				#nf-field-14_1-container,
-				#nf-field-18_1-container {
-					font-weight: bold;
-					margin-bottom: 0;
-				}
+						label {
+							font-weight: bold;
+							margin-bottom: 0;
+							padding-bottom: 0;
+						}
 
-				.email-container input {
-					//margin-top: 0.5rem;
-					font-style: italic;
-					background: #fff;
-					padding: 0.75rem;
-					border-radius: 3px;
-					border: none;
-				}
+						input#mce-EMAIL {
+							margin-top: 0.5rem;
+							font-style: italic;
+							background: #fff !important;
+							padding: 0.75rem;
+							border-radius: 3px;
+							border: none;
+							width: 100%;
+							color: $maintext !important;
+						}
 
-				#nf-field-14-container {
-					margin-bottom: 0 !important;
-					font-weight: bold !important;
+						#mc-embedded-subscribe {
+							display: none;
+						}
 
-					@media (max-width: 760px) {
-						text-align: center;
+						.nf-response-msg {
+							margin-bottom: 2rem;
+						}
 					}
-				}
-
-				.nf-response-msg {
-					margin-bottom: 2rem;
 				}
 			}
 

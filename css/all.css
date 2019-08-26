@@ -955,28 +955,30 @@ img {
       @media (max-width: 500px) {
         .footer-wrap-outer .footer-wrap .footer-contact {
           width: 100% !important; } }
-      @media (max-width: 760px) {
-        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup {
-          max-width: 270px;
-          margin: auto; } }
-      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14_1-container,
-      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-18_1-container {
-        font-weight: bold;
-        margin-bottom: 0; }
-      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup .email-container input {
-        font-style: italic;
-        background: #fff;
-        padding: 0.75rem;
-        border-radius: 3px;
-        border: none; }
-      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14-container {
-        margin-bottom: 0 !important;
-        font-weight: bold !important; }
+      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup {
+        background: none;
+        font-size: inherit; }
         @media (max-width: 760px) {
-          .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #nf-field-14-container {
-            text-align: center; } }
-      .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup .nf-response-msg {
-        margin-bottom: 2rem; }
+          .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup form {
+            max-width: 270px;
+            margin: auto; } }
+        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup form label {
+          font-weight: bold;
+          margin-bottom: 0;
+          padding-bottom: 0; }
+        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup form input#mce-EMAIL {
+          margin-top: 0.5rem;
+          font-style: italic;
+          background: #fff !important;
+          padding: 0.75rem;
+          border-radius: 3px;
+          border: none;
+          width: 100%;
+          color: #444 !important; }
+        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup form #mc-embedded-subscribe {
+          display: none; }
+        .footer-wrap-outer .footer-wrap .footer-contact .newsletter-signup #mc_embed_signup form .nf-response-msg {
+          margin-bottom: 2rem; }
       .footer-wrap-outer .footer-wrap .footer-contact .contact-info-hours {
         display: -webkit-box;
         display: flex;
