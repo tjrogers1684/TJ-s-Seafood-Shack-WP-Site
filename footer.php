@@ -77,7 +77,6 @@
 			<div class="social-links">
 				<a class="social-link facebook" href="https://www.facebook.com/tjsseafoodshack"><i class="fab fa-facebook-square"></i></a>
 				<a href="https://www.instagram.com/tjsseafoodshack/"><i class="fab fa-instagram"></i></a>
-				<a class="social-link twitter" href="https://twitter.com/tjsseafood"><i class="fab fa-twitter-square"></i></a>
 			</div>
 		</div>
 
